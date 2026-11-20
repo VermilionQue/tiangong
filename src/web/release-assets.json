@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "files": {
+    "scripts-core.3e9ec45e026830bd.js": "3e9ec45e026830bd701f071a2bfc6731851b838a0afbfed166f3d2715a7b5520",
+    "scripts-install.d497762a9ab84c8d.js": "d497762a9ab84c8dd72addcda4e66c10625a1d48eb4df3eb39c5fac5a53e04f8",
+    "scripts-modules.c4d3d0e88c69e6e5.js": "c4d3d0e88c69e6e5863a8c86bd3918f76278ee658e1c3b303020635c8874b333",
+    "scripts-theme.2aeff2fa20cbd957.js": "2aeff2fa20cbd9571bdade1412bbe4194397cbe6f73ca2cdee8ca2e5b639b3f0",
+    "scripts-work.a46e3ac9c5e0ac60.js": "a46e3ac9c5e0ac602931812be280531c649f0ba9dc351d0ff42b42f0f0f6abfe",
+    "styles-app.20d6d48ad932c5c0.css": "20d6d48ad932c5c06aa2678329813a697a197242b9b290e2e0a1bd7f5554f02f",
+    "styles-journal-notes.3100558e18c5d45d.css": "3100558e18c5d45dc0b67421ba03af6baf15303a3a3f735d1693e01867cb6a07",
+    "styles-journal-todos.0e0656db4172efa0.css": "0e0656db4172efa0fb0b5bcf7a298e16bfa2912c9e70e909e67e08d39f60992a",
+    "styles-middle.f7ad8feaa919c5ee.css": "f7ad8feaa919c5eec2f73b8634e254ecb101e7e9afb779df8a74373ecf3ecf5c",
+    "styles-shell.ae43759c13e9a4f3.css": "ae43759c13e9a4f35934906b2631f518c49b98d1ba0a689aa04e5dae2ff65202"
+  }
+}

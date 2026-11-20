@@ -1,0 +1,88 @@
+/* V45: use the active theme's surface; keep the warm numeric emphasis. */
+#today .t40-finance,#finance .t44-budget-card{background:var(--paper,#fff);color:var(--ink);border-color:var(--line);box-shadow:none}
+html[data-theme] #today .t40-finance h2{color:var(--ink)}
+#today .t40-finance :is(.t40-link,#t40-money-toggle),#finance .t44-budget-card footer button{color:var(--accent)}
+#today .t40-finance .t40-section-head,#finance .t44-budget-card header{border-bottom-color:var(--line)}
+#today .t40-finance :is(.t40-spending-label,.t40-budget-line,.t40-finance-note),#finance .t44-budget-card :is(.t44-budget-balance small,.t44-budget-limit small,footer){color:var(--muted)}
+#today .t40-spending,#finance .t44-budget-card :is(.t44-budget-limit,.t44-budget-balance strong){color:#cb711f}
+#finance .t44-budget-icon{background:var(--soft,#f2f5fa);color:var(--accent);border-color:var(--line)}
+#today .t40-budget-bar,#finance .t44-budget-card .fh-healthbar{background:var(--soft,#edf2f6)}
+#today .t40-budget-bar.is-low,#finance .t44-budget-card .fh-healthbar.low{background:#fbeced}
+
+/* Reading and completing tasks occupies the panel; tools open on demand. */
+html[data-theme] #todos .todo-main{padding:14px;gap:0}
+html[data-theme] #todos .todo-main-heading{margin:0 0 8px;padding:0;min-height:30px}
+html[data-theme] #todos .todo-main-heading .todo-eyebrow{display:none}
+html[data-theme] #todos .todo-tools{margin:0 0 7px;border:1px solid var(--line);border-radius:10px;background:var(--paper);flex-shrink:0}
+html[data-theme] #todos .todo-tools>summary{padding:8px 11px;cursor:pointer;font-size:12px;color:var(--muted)}
+html[data-theme] #todos .todo-tools>summary span{float:right;font-size:11px}
+html[data-theme] #todos .todo-tools[open]>summary span{display:none}
+html[data-theme] #todos .todo-tools-body{padding:0 10px 10px;max-height:270px;overflow:auto}
+html[data-theme] #todos .todo-tools :is(.todo-filters,.todo-search,.todo-quick){margin:8px 0}
+html[data-theme] #todos .todo-tools .todo-filters{gap:4px;flex-wrap:wrap}
+html[data-theme] #todos .todo-filters button{font-size:12px;padding:6px 8px}
+html[data-theme] #todos .todo-list-caption{font-size:11px;padding:0;margin:0 0 7px;min-height:16px}
+html[data-theme] #todos #todo-error:empty{display:none}
+html[data-theme] #todos .todo-sync-drawer{margin-top:6px;flex-shrink:0;font-size:11px;color:var(--muted)}
+html[data-theme] #todos .todo-sync-drawer>summary{cursor:pointer;line-height:20px}
+html[data-theme] #todos .todo-sync-drawer .todo-sync{max-height:150px;overflow:auto;margin:6px 0 0;padding:8px}
+html[data-theme] #todos .todo-row{display:grid;grid-template-columns:22px minmax(0,1fr) 22px;column-gap:7px;row-gap:3px;padding:12px 8px}
+html[data-theme] #todos .todo-row>.todo-check{grid-column:1;grid-row:1 / span 2;margin-top:2px}
+html[data-theme] #todos .todo-row-time{grid-column:2;grid-row:1;width:auto;min-width:0;display:flex;gap:7px;align-items:center;padding:0;font-size:11px;line-height:1.4;text-align:left}
+html[data-theme] #todos .todo-row-time :is(strong,small){font-size:11px;line-height:1.4;margin:0;display:inline}
+html[data-theme] #todos .todo-row-main{grid-column:2;grid-row:1;width:100%;min-width:0;padding:0}
+html[data-theme] #todos .todo-row:has(.todo-row-time) .todo-row-main{grid-row:2}
+html[data-theme] #todos .todo-row-actions{grid-column:3;grid-row:1 / span 2;min-width:0}
+html[data-theme] #todos .todo-row-actions button{width:22px;min-width:0;padding:0}
+@media(min-width:1101px){
+ html[data-theme] #todos .todo-workspace{grid-template-columns:minmax(0,1.6fr) minmax(390px,1fr)}
+ html[data-theme] #todos .todo-right{grid-template-rows:minmax(210px,.34fr) minmax(0,1fr)}
+ html[data-theme] #todos .todo-main #todo-list{flex:1;min-height:0;overflow:auto}
+}
+
+/* A heading's rule follows its content, including long customer names. */
+html[data-theme] #crm-editor .crm-dialog-head{position:static;inset:auto;width:auto;height:auto;min-height:0;padding:24px 28px 20px;margin:0;background:transparent;box-shadow:none;border:0;border-bottom:1px solid var(--line,#dce4ee);display:flex;align-items:flex-start;justify-content:space-between}
+html[data-theme] #crm-editor .crm-dialog-head h2{height:auto;margin:0;line-height:1.5;overflow-wrap:anywhere}
+html[data-theme] #crm-editor .crm-dialog-head>div{min-width:0}
+#crm-editor .crm-business-types>span{display:block;margin-bottom:10px;color:var(--muted);font-size:14px}
+#crm-editor .crm-business-types>div{display:flex;flex-wrap:wrap;gap:9px}
+#crm-editor .crm-business-types label{display:flex;align-items:center;gap:7px;padding:9px 11px;border:1px solid var(--line);border-radius:10px;font-size:13px}
+#crm-editor .crm-business-types input{width:16px;height:16px;margin:0;accent-color:var(--accent)}
+#crm-editor .crm-business-types label:has(input:checked){background:var(--soft,#f0f5fb);border-color:var(--accent)}
+
+.crm-month-summaries{display:grid;grid-template-rows:1fr 1fr;gap:18px;min-width:0;height:660px;max-height:80vh}
+.legrand-workspace .crm-month-summaries #receipts,.crm-signed-summary{height:auto;max-height:none;min-height:0;background:var(--paper,#fff);color:var(--ink);border:1px solid var(--line,#dce4ee);border-radius:22px;padding:24px;display:flex;flex-direction:column;overflow:auto}
+.crm-signed-summary h2,.legrand-workspace #receipt-heading{font-size:22px;line-height:1.5;margin:0}
+.legrand-workspace #receipts .receipt-eyebrow{display:block}
+.legrand-workspace #receipts .receipt-heading-row{gap:8px;align-items:center;margin-bottom:12px}
+.legrand-workspace #receipts .receipt-heading-row button{padding:9px 11px;font-size:12px;white-space:nowrap}
+.legrand-workspace #receipts .receipt-overview{display:flex;flex-direction:column;align-items:stretch;gap:14px;padding:0;margin:0;background:transparent;border:0}
+.legrand-workspace #receipts .receipt-total{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.legrand-workspace #receipts .receipt-month-picker{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0}
+.legrand-workspace #receipts .receipt-month-picker label{font-size:0;gap:0}
+.legrand-workspace #receipts .receipt-month-picker input{font-size:13px;min-width:130px;max-width:170px;padding:7px}
+.legrand-workspace #receipt-status:empty{display:none}
+.t45-summary-link{appearance:none;display:block;border:0;background:transparent;color:var(--accent);padding:4px 0;margin:0;text-align:left;cursor:pointer;font:inherit;border-radius:6px}
+.t45-summary-link:hover{opacity:.8}.t45-summary-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+#receipt-total,#crm-signed-total{font-size:clamp(28px,2.6vw,40px);font-weight:750;line-height:1.3;color:var(--accent);white-space:nowrap}
+#crm-signed-total{margin:5px 0}
+#crm-signed-missing{padding:4px 0;text-align:left;font-size:12px;margin-top:auto}
+.t45-ledger{width:min(780px,calc(100vw - 32px));max-height:85dvh;box-sizing:border-box;padding:26px;border:1px solid var(--line,#dce4ee);border-radius:24px;background:var(--paper,#fff);color:var(--ink,#23364d);overflow:auto}
+.t45-ledger::backdrop{background:#14233e66;backdrop-filter:blur(5px)}
+.t45-dialog-heading{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.t45-dialog-heading h2{font:inherit;font-size:23px;font-weight:700;margin:0;line-height:1.5}
+.t45-dialog-heading>button{border:0;background:transparent;color:var(--muted);font-size:26px;cursor:pointer;padding:0 5px}
+.t45-ledger .receipt-list,.t45-ledger-list{max-height:none;height:auto;overflow:visible;display:flex;flex-direction:column;gap:12px}
+.t45-ledger .receipt-list-tools{margin-bottom:18px}
+.people-delete-area{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.people-delete-area small{color:var(--muted);font-size:12px}
+@media(max-width:760px){
+ .crm-month-summaries{height:auto;max-height:none;grid-template-rows:auto auto}
+ .legrand-workspace .crm-month-summaries #receipts,.crm-signed-summary{padding:20px;overflow:visible}
+ .t45-ledger{padding:20px;border-radius:20px}
+ html[data-theme] #crm-editor .crm-dialog-head{padding:20px}
+}
+
+#finance .t44-budget-card.is-low .t44-budget-balance strong{color:#be4c49}
+
+#finance .t44-budget-card .fh-button{color:var(--accent)}
+.legrand-workspace #receipts #receipt-total{font-size:clamp(28px,2.6vw,40px)}

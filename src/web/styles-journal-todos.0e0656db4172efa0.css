@@ -1,0 +1,139 @@
+/* A paper journal for the todo page only. Other spaces keep their own theme. */
+body:is([data-view=todos],[data-view=notes]){background:#f7f5ed;color:#374653}
+body:is([data-view=todos],[data-view=notes]) main{background-image:radial-gradient(#b8bcc14a .8px,transparent .8px);background-size:18px 18px;min-height:100vh}
+body:is([data-view=todos],[data-view=notes]) header{background:#fffef8e8;border-bottom:1px dashed #b6c7d0}
+body:is([data-view=todos],[data-view=notes]) .content{max-width:none;padding:28px 30px 14px}
+body:is([data-view=todos],[data-view=notes]) .breadcrumb strong{color:#405773;font-family:'Kaiti SC','STKaiti','KaiTi',cursive;font-weight:700}
+body:is([data-view=todos],[data-view=notes]) .sidebar{background:#eaf2fc;border-right:1px solid #bbcede;color:#435b77}
+body:is([data-view=todos],[data-view=notes]) .sidebar .brand{color:#34516d}
+body:is([data-view=todos],[data-view=notes]) .sidebar .brand small,body:is([data-view=todos],[data-view=notes]) .sidebar .space{color:#768da5}
+body:is([data-view=todos],[data-view=notes]) .sidebar .seal{background:#6d9deb;box-shadow:2px 3px 0 #38598d;border:1.5px solid #416183;border-radius:15px 19px 12px 17px;transform:rotate(-5deg)}
+body:is([data-view=todos],[data-view=notes]) .sidebar nav button{color:#5e7692}
+body:is([data-view=todos],[data-view=notes]) .sidebar nav button:hover{background:#dbe9fa}
+body:is([data-view=todos],[data-view=notes]) .sidebar nav button.active{background:#bcd5ff;color:#345c91;border:1.5px solid #6d91c5;border-radius:12px 17px 13px 18px;box-shadow:2px 3px 0 #8daed144;transform:rotate(-1deg)}
+body:is([data-view=todos],[data-view=notes]) .sidebar .daily-quote{border-color:#b8ccdf}
+body:is([data-view=todos],[data-view=notes]) .sidebar .daily-quote p{color:#546e8a}
+body:is([data-view=todos],[data-view=notes]) .sidebar .daily-quote>span,body:is([data-view=todos],[data-view=notes]) .sidebar .daily-quote small{color:#8096b0}
+body:is([data-view=todos],[data-view=notes]) footer{font-size:10px;color:#8794a0;padding:0 5px;margin-top:19px}
+#todos{--todo-blue:#527dc2;--todo-ink:#3e4e64;--todo-muted:#7e8b9c;--todo-line:#d2dbe4;--journal-hand:'Kaiti SC','STKaiti','KaiTi',cursive}
+#todos .todo-workspace{grid-template-columns:minmax(0,7fr) minmax(290px,3fr);align-items:start;gap:24px;min-height:0;background:none;border:0;border-radius:0;box-shadow:none;overflow:visible}
+#todos .todo-right{gap:26px;display:grid;min-width:0}
+#todos .todo-calendar{position:relative;min-width:0;background:#fffefb;border:1.5px solid #a6b8cb;border-radius:7px 11px 9px 6px;overflow:visible;box-shadow:4px 5px 0 #d7e1e9,7px 9px 0 -2px #fdfcf9,7px 9px 0 -1px #c9d3db}
+#todos .todo-calendar::before{content:'';position:absolute;top:-9px;left:20px;right:20px;height:20px;background-image:repeating-linear-gradient(90deg,transparent 0 20px,#6b8099 20px 22px,#e6edf6 22px 25px,#6b8099 25px 27px,transparent 27px 70px);border-radius:4px;z-index:1;pointer-events:none}
+#todos .todo-calendar-heading{position:relative;padding:32px 25px 22px;min-height:112px;gap:12px;background:#fffefb;border-radius:8px 8px 0 0;isolation:isolate}
+#todos .todo-calendar-heading h2{font-family:var(--journal-hand);font-size:31px;font-weight:700;letter-spacing:1px;color:#436493;position:relative;width:fit-content;z-index:1}
+#todos .todo-calendar-heading h2::after{content:'';position:absolute;left:-3px;right:-7px;bottom:1px;height:10px;background:#f9e484b3;transform:rotate(-2deg);z-index:-1;border-radius:60% 30% 45% 10%}
+#todos .todo-calendar-heading>div{flex-wrap:wrap}
+#todos .todo-calendar-heading small,.todo-calendar-range{display:block;color:#7d8d9e;font-size:11px;line-height:1.7;margin-top:9px;font-family:inherit;font-weight:400}
+#todos .todo-calendar-heading::after{content:'';position:absolute;left:53%;top:24px;width:92px;height:64px;transform:rotate(5deg);pointer-events:none;background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80'%3E%3Cg fill='none' stroke='%237692b3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M25 54C10 57 9 37 24 35C24 17 48 14 55 29C69 20 83 34 77 46C94 46 92 61 78 61L25 60' fill='%23eef5ff'/%3E%3Cpath d='M72 25C63 1 101-2 101 18C102 32 83 35 77 26' fill='%23f9e484'/%3E%3Cpath d='M83 4L82 0M105 7L111 2M110 22L117 24M103 34L108 40M65 12L60 8'/%3E%3Cpath d='M34 44L35 45M54 44L55 45M41 49Q46 54 51 49'/%3E%3C/g%3E%3C/svg%3E")}
+#todos .todo-calendar-heading button{color:#4f6d98;border:1px solid #a8bdd7;border-radius:9px 6px 10px 7px;background:#f1f6fe;width:31px;height:31px;font-size:23px;box-shadow:1px 2px 0 #ccd7e5}
+#todos .todo-calendar-heading button:hover{background:#e0ecff;transform:translateY(-1px)}
+#todos #todo-month-now{font-family:var(--journal-hand);font-size:14px;min-width:56px;background:#fff1a9;border-color:#d3bd69;color:#6d622f}
+#todos .todo-calendar-week{background:#e9f2ff;border-block:1px solid #b5c7df;border-radius:0}
+#todos .todo-calendar-week span{font-family:var(--journal-hand);font-size:15px;color:#4c6c98;padding:12px 0;border-right:1px dashed #c6d5e7;letter-spacing:1px}
+#todos .todo-calendar-week span:nth-last-child(-n+2){color:#9b6d9b;background:#f3edfa}
+#todos .todo-calendar-scroll{height:clamp(460px,calc(100dvh - 300px),820px);min-height:0;overflow-y:auto;overscroll-behavior-y:contain;scrollbar-width:thin;scrollbar-color:#b7cbe1 #f2f5f9;scroll-padding:15px}
+#todos #todo-calendar-grid{display:block}
+#todos .todo-calendar-week-row{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));position:relative}
+#todos .todo-calendar-day{background:#fffefb;min-height:124px;border-right:1px solid #dce3ea;border-bottom:1px solid #d4dfe9;padding:8px 0;position:relative}
+#todos .todo-calendar-day:nth-child(7n){border-right:0}
+#todos .todo-calendar-day.outside{background:#f7f8f7}
+#todos .outside .todo-calendar-date{color:#8e9bab}
+#todos .todo-calendar-week-row.is-current-week{outline:2px solid #a499d0;outline-offset:-2px;z-index:1;box-shadow:0 4px 11px #7383ad15}
+#todos .is-current-week .todo-calendar-day{background:#f6f2ff;min-height:158px;border-top:1px solid #b9aee0;border-bottom:1px solid #b9aee0}
+#todos .is-current-week .todo-calendar-day:first-child::after{content:'本周';position:absolute;bottom:8px;left:8px;font-family:var(--journal-hand);font-size:12px;color:#9a87bd;transform:rotate(-7deg);pointer-events:none}
+#todos .todo-calendar-day.is-today{background:#fff3ce;box-shadow:inset 0 0 0 2px #dcc176;z-index:1}
+#todos .todo-calendar-day.is-selected:not(.is-today){background:#eef5ff;box-shadow:inset 0 0 0 2px #8cb2e4}
+#todos .todo-calendar-date{display:flex;align-items:center;gap:3px;padding:0 8px 9px;font-size:15px;color:#596d89;font-family:var(--journal-hand);white-space:nowrap;min-height:38px}
+#todos .todo-calendar-date span{width:29px;height:29px;border-radius:43% 51% 46% 54%;font-size:16px;flex:none}
+#todos .is-today .todo-calendar-date>span:first-child{background:#ed9db5;color:#54394b;border:1.5px solid #b76c8d;transform:rotate(-9deg);box-shadow:2px 2px 0 #e6ba6c55;font-weight:700}
+#todos .todo-calendar-date .todo-calendar-today-label{font-family:var(--journal-hand);font-size:11px;color:#af6a80;background:none;border:0;box-shadow:none;width:auto;height:auto}
+#todos .todo-calendar-date .todo-calendar-month-label{font-size:11px;letter-spacing:0;color:#8d83b0;width:auto;height:auto;background:none;border:0}
+#todos .todo-calendar-events{gap:5px;padding:0 2px}
+#todos .todo-calendar-event{background:#dfeafe;border:1px solid #b4c9ea;border-left:3px solid #8dabda;color:#43618b;border-radius:3px 5px 4px 3px;font-size:11px;padding:5px 4px;box-shadow:1px 1px 0 #a7b4c31a;line-height:1.6}
+#todos .todo-calendar-event:nth-child(2n){background:#ebe3fa;border-color:#cbbbe6;border-left-color:#ae95d0;color:#756291}
+#todos .todo-calendar-event.important{background:#fbe2ec;border-color:#e9b7cc;border-left-color:#d994b3;color:#915b78}
+#todos .todo-calendar-event:hover{filter:none;background:#cfdef7;transform:rotate(-.6deg)}
+#todos .todo-calendar-event.important:hover{background:#f8d4e3}
+#todos .todo-calendar-event>span{-webkit-line-clamp:2}
+#todos .todo-calendar-event b{font-weight:600}
+#todos .todo-calendar-more{font-size:10px;color:#7c80a4;margin:2px 4px}
+#todos .todo-calendar-hint{background:#fffefb;border-radius:0 0 7px 7px;padding:13px 16px;font-size:11px;color:#8b91a3;border-top:1px dashed #d2dce5}
+#todos .todo-someday{position:relative;background:#fff2ae;border:1px solid #d5be6d;border-radius:2px 3px 18px 3px;box-shadow:3px 6px 0 #d1c7a52e;padding:23px 22px 16px;transform:rotate(.65deg)}
+#todos .todo-someday::before{content:'';position:absolute;top:-10px;left:calc(50% - 37px);width:74px;height:24px;background:repeating-linear-gradient(35deg,#bcd8f2bb 0 5px,#cde1f6bb 5px 10px);border-inline:1px dashed #a9c2d9;transform:rotate(-6deg);pointer-events:none}
+#todos .todo-someday::after{content:'';position:absolute;right:0;bottom:0;width:19px;height:19px;background:linear-gradient(135deg,#e7d480 50%,#f7f5ed 50%);border-radius:0 0 16px 0;pointer-events:none}
+#todos .todo-someday .todo-eyebrow{font-size:9px;letter-spacing:2px;color:#9f894c}
+#todos .todo-someday h2{font-family:var(--journal-hand);font-size:25px;color:#716039;margin-top:6px;font-weight:700;letter-spacing:2px}
+#todos #todo-someday-count{color:#a38e51;font-family:var(--journal-hand);font-size:16px}
+#todos .todo-someday-hint{color:#98865a;font-size:11px;margin:9px 0 7px}
+#todos #todo-someday-list{max-height:none;overflow:visible}
+#todos .someday-row,#todos .someday-row:last-child{padding:11px 0;border-bottom:1px dashed #d6c38c;gap:9px}
+#todos .someday-row .todo-name{font-family:var(--journal-hand);color:#655d42;font-size:16px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+#todos .someday-row .todo-row-actions{display:none}
+#todos .someday-row .todo-check{border-color:#ac9c6d;background:#fff8d4;width:18px;height:18px;min-width:18px;border-radius:48% 43% 52% 45%}
+#todos .someday-row .todo-check[aria-checked=true]{background:#91aedd;border-color:#6e91bf}
+#todos .todo-someday-toggle{display:block;width:100%;font-size:24px;letter-spacing:5px;color:#927e40;line-height:25px;padding:3px;border-radius:4px}
+#todos .todo-someday-toggle:hover{background:#f1de8c6b}
+#todos #todo-someday-form{font-size:19px;padding-top:10px;color:#9a884e}
+#todos #todo-someday-input{color:#706440;font-size:12px}
+#todos #todo-someday-input::placeholder{color:#a39466}
+#todos #todo-someday-add{color:#7e6b32;background:#f4df8b;border:1px solid #d6c27a;border-radius:5px 7px 4px 6px}
+#todos .todo-someday-empty{color:#9c8e62}
+#todos .todo-main{position:relative;background:#fffefa;border:1.3px solid #b7c8da;border-radius:5px 8px 7px 4px;padding:20px 20px 22px;min-height:0;box-shadow:3px 4px 0 #e0e5eb}
+#todos .todo-main::before{content:'';position:absolute;right:19px;top:-7px;width:29px;height:18px;border:2px solid #a69ac9;border-bottom:0;border-radius:12px 11px 0 0;transform:rotate(7deg);pointer-events:none}
+#todos .todo-main-heading{margin-bottom:17px;gap:8px}
+#todos .todo-main-heading h2{font-family:var(--journal-hand);font-size:25px;color:#577493;letter-spacing:1px;margin:5px 0 0}
+#todos .todo-main-heading .todo-eyebrow{font-size:9px;color:#97a2ae;letter-spacing:1px}
+#todos .todo-list-total{border:1px dashed #b7c7da;background:#edf4fc;border-radius:6px 3px 7px 4px;color:#6a87a7;font-size:10px;padding:6px}
+#todos .todo-filters{gap:3px;flex-wrap:wrap;border-bottom:1px dashed #d2dbe4;margin-bottom:12px;padding-bottom:12px}
+#todos .todo-filters button{font-size:10px;padding:6px 7px;color:#8291a4;border-radius:4px 7px 5px 3px}
+#todos .todo-filters .selected{background:#e8e0f6;color:#82709c;box-shadow:0 2px 0 #c5b7dc;transform:rotate(-1deg)}
+#todos .todo-search{margin-bottom:12px}
+#todos .todo-search input{font-size:12px}
+#todos .todo-quick{border:1px dashed #b5c9dd;background:#f1f6fc;border-radius:5px 7px 6px 4px;margin-bottom:13px}
+#todos .todo-quick-title{padding:9px 10px;gap:6px}
+#todos .todo-quick-title input{font-size:12px}
+#todos .todo-quick-options{padding:8px;gap:8px;border-top:1px dashed #c8d7e8}
+#todos .todo-quick-options label{font-size:10px;gap:4px}
+#todos .todo-quick-options input[type=date]{width:103px}
+#todos .todo-quick-options input[type=time]{width:73px}
+#todos .primary{background:#779fdb;border:1px solid #5079b5;box-shadow:1px 2px 0 #aec4e4;border-radius:7px 4px 8px 5px;font-size:11px;min-height:30px;padding:5px 11px}
+#todos .primary:hover{background:#6d94cf;transform:translateY(-1px)}
+#todos .todo-list-caption{font-size:10px;line-height:1.6;margin-top:12px;flex-wrap:wrap;gap:5px}
+#todos .todo-day-heading{font-family:var(--journal-hand);font-size:15px;padding-top:17px;color:#6b82a2;gap:6px}
+#todos .todo-day-heading small{font-family:inherit;font-size:10px}
+#todos .todo-row{gap:8px;padding:13px 0;border-bottom:1px dashed #dbe1e7}
+#todos .todo-row:last-child{border-bottom:1px dashed #dbe1e7}
+#todos .todo-check{border:1.4px solid #a4b6cd;border-radius:47% 52% 49% 46%;width:18px;height:18px;min-width:18px}
+#todos .todo-row-time{font-size:10px;width:34px;line-height:23px}
+#todos .todo-name{font-size:12px;color:#526781;line-height:1.7}
+#todos .todo-note-preview{font-size:10px;line-height:1.7;color:#919bad;-webkit-line-clamp:2}
+#todos .todo-row-actions button{font-size:18px;width:19px}
+#todos .todo-row-actions button.is-important{color:#c991ad}
+#todos .todo-empty{padding:29px 10px}
+#todos .todo-empty>span{background:#f4eccf;color:#baa55a}
+#todos .todo-empty h3{font-family:var(--journal-hand);font-size:17px;color:#7d91a8}
+#todos .todo-empty p{font-size:11px}
+#todos .todo-detail{background:#fffef9;border:1.5px solid #adc1d7;border-radius:9px 13px 8px 11px;box-shadow:6px 7px 0 #c1cee480,0 25px 80px #35466130}
+#todos .todo-detail-top h2{font-family:var(--journal-hand);font-size:25px;color:#5e7b9c}
+#todos .todo-detail-fields input,#todos .todo-detail-fields select,#todos #todo-edit-title,#todos #todo-edit-note{border-color:#c4d4e5;background:#fffeff;border-radius:5px 8px 4px 6px}
+#todos :is(button,input,textarea,select):focus-visible{outline:2px solid #947cc4;outline-offset:3px}
+@media(min-width:1700px){#todos .todo-workspace{gap:30px}#todos .todo-calendar-heading{padding:34px 32px 25px}#todos .todo-calendar-heading h2{font-size:36px}#todos .todo-calendar-day{min-height:140px}#todos .is-current-week .todo-calendar-day{min-height:182px}#todos .todo-calendar-event{font-size:12px;padding:6px}#todos .todo-main{padding:25px}#todos .todo-name{font-size:14px}#todos .todo-row-time{font-size:12px;width:40px}#todos .todo-someday .todo-name{font-size:18px}}
+@media(max-width:1200px){body:is([data-view=todos],[data-view=notes]) .content{padding:23px 18px}#todos .todo-workspace{grid-template-columns:minmax(0,7fr) minmax(270px,3fr);gap:18px}#todos .todo-calendar-heading{padding:29px 17px 18px}#todos .todo-calendar-heading::after{display:none}#todos .todo-calendar-heading h2{font-size:27px}#todos .todo-main{padding:17px 15px}#todos .todo-someday{padding:22px 17px 13px}#todos .todo-calendar-date{padding-inline:5px}}
+@media(max-width:1000px){#todos .todo-workspace,body:not(.nav-collapsed) #todos .todo-workspace{grid-template-columns:minmax(0,1fr)}#todos .todo-right{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);align-items:start;gap:22px}#todos .todo-calendar-scroll{height:530px}#todos .todo-calendar-heading::after{display:block;left:49%}#todos .todo-calendar-week span{font-size:14px}#todos .todo-calendar-day{min-height:115px}#todos .is-current-week .todo-calendar-day{min-height:150px}}
+@media(max-width:600px){body:is([data-view=todos],[data-view=notes]) .content{padding:20px 12px 12px}#todos .todo-workspace{gap:26px}#todos .todo-right{grid-template-columns:1fr;gap:27px}#todos .todo-calendar-heading{padding:24px 13px 15px;min-height:92px}#todos .todo-calendar-heading h2{font-size:25px}#todos .todo-calendar-heading::after{display:none}#todos .todo-calendar-heading small,.todo-calendar-range{font-size:9px}#todos .todo-calendar-heading button{height:28px;min-width:25px;width:25px}#todos #todo-month-now{font-size:12px;min-width:45px;padding:0 5px}#todos .todo-calendar-week span{font-size:12px;padding:10px 0;letter-spacing:0}#todos .todo-calendar-scroll{height:480px}#todos .todo-calendar-day{min-height:107px;padding-top:5px}#todos .is-current-week .todo-calendar-day{min-height:143px}#todos .todo-calendar-date{padding:0 3px 6px;font-size:12px;gap:0;flex-wrap:wrap;align-content:start;height:39px;min-height:39px}#todos .todo-calendar-date span{height:24px;width:24px;font-size:14px}#todos .todo-calendar-date .todo-calendar-today-label{font-size:9px}#todos .todo-calendar-date .todo-calendar-month-label{font-size:9px}#todos .todo-calendar-event{font-size:9px;padding:3px 2px;line-height:1.5;border-left-width:2px;white-space:normal}#todos .todo-calendar-event>span{-webkit-line-clamp:3}#todos .todo-calendar-events{padding:0;gap:4px}#todos .todo-calendar-hint{font-size:9px;padding:10px}#todos .todo-someday{padding:24px 23px 17px}#todos .todo-main{padding:23px 20px}#todos .todo-name{font-size:14px}#todos .todo-row-time{font-size:11px;width:37px}#todos .todo-search input,#todos .todo-quick-title input,#todos #todo-someday-input{font-size:16px}#todos .todo-filters{flex-wrap:wrap;overflow:visible}#todos .todo-filters button{font-size:11px}#todos .todo-quick-options{gap:10px}#todos .todo-quick-options input[type=date]{width:110px}#todos .todo-quick-options input[type=time]{width:82px}#todos .todo-note-preview{font-size:11px}}
+@media(prefers-reduced-motion:reduce){#todos *{scroll-behavior:auto!important;transition:none!important}}
+
+#todos,#notes{scroll-margin-top:110px}
+#todos .todo-calendar-heading .todo-calendar-title{display:block}
+#todos .todo-calendar-today-label{font:11px var(--journal-hand);color:#ae6a80}
+#todos .todo-calendar-month-label{font-size:10px;color:#8d83b0}
+
+/* Keep the sticky note compact so the agenda remains within reach. */
+#todos .todo-someday{padding-top:19px;padding-bottom:12px}
+#todos .todo-someday .todo-eyebrow,#todos .todo-someday-hint,#todos .todo-main-heading .todo-eyebrow{display:none}
+#todos .todo-someday h2{margin:0 0 5px}
+#todos .someday-row,#todos .someday-row:last-child{padding:8px 0}
+#todos #todo-someday-form{padding-top:5px}
+#todos .todo-someday-toggle{line-height:21px;padding:0}
+#todos .todo-main-heading h2{margin:0}

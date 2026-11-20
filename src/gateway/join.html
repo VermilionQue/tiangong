@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <title>加入天工录</title>
+  <link rel="stylesheet" href="/auth/login.css">
+  <script src="/auth/join.js" defer></script>
+  <style>
+    .gateway-card{margin:12px 0}.join-identity{color:#345a91;font-size:14px;overflow-wrap:anywhere}.join-form>label{margin-top:20px}.join-form .gateway-username{margin-bottom:0}.join-hint{font-size:12px;color:#7a869a;line-height:1.7}.join-error{font-size:13px;line-height:1.7;color:#a44958;overflow-wrap:anywhere}.join-submit{display:block;width:100%;padding:15px 18px;background:#345fae;color:white;border:0;border-radius:12px;font:inherit;font-size:15px;font-weight:600;cursor:pointer;margin-top:20px}.join-submit:disabled{opacity:.55;cursor:wait}.join-back{display:inline-block;color:#647da2;font-size:12px;margin-top:22px;text-underline-offset:4px}.join-form input{font-size:16px}.join-retry{border:1px solid #ccd8e9;border-radius:10px;padding:9px 16px;color:#426493;background:white;cursor:pointer}.join-password-check{margin-top:14px!important}#join-loading{color:#7a869a;font-size:14px} [hidden]{display:none!important}
+  </style>
+</head>
+<body class="gateway-login">
+  <main class="gateway-card">
+    <div class="gateway-mark" aria-hidden="true">✧</div>
+    <p class="gateway-eyebrow">TIANGONG JOURNAL</p>
+    <h1>给生活一个新空间。</h1>
+    <p class="gateway-description">设好自己的密码，就可以开始记录。</p>
+    <p id="join-loading" role="status">正在查看邀请…</p>
+    <p id="join-identity" class="join-identity"></p>
+    <form id="join-form" class="join-form" hidden>
+      <label for="join-username">你的用户名</label>
+      <input id="join-username" class="gateway-username" name="username" type="text" readonly autocomplete="username">
+      <label for="join-password">设置密码</label>
+      <div class="gateway-password-wrap"><input id="join-password" name="password" type="password" required minlength="14" maxlength="1024" autocomplete="new-password"><button type="button" id="join-show" aria-label="显示密码">显示</button></div>
+      <p class="join-hint">至少 14 个字符。请只在这里填写，不必把密码告诉邀请你的人。</p>
+      <label for="join-confirm">再输入一次密码</label>
+      <div class="gateway-password-wrap"><input id="join-confirm" type="password" required minlength="14" maxlength="1024" autocomplete="new-password"></div>
+      <button id="join-submit" type="submit" class="join-submit">开启我的天工录 →</button>
+    </form>
+    <p id="join-message" class="join-error" role="alert" aria-live="polite"></p>
+    <button id="join-retry" class="join-retry" type="button" hidden>重新查看邀请</button>
+    <a class="join-back" href="/login">已有账号，返回登录</a>
+  </main>
+</body>
+</html>

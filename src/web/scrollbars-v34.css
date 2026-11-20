@@ -1,0 +1,56 @@
+/* Native scroll mechanics, with a thumb only. Visibility never changes its gutter. */
+html.tg-scrollbars{--tg-scrollbar-rgb:101,129,173}
+html.tg-scrollbars[data-theme=journal]{--tg-scrollbar-rgb:135,157,193}
+
+html.tg-scrollbars,html.tg-scrollbars *{
+  --tg-scrollbar-opacity:0;
+  scrollbar-width:auto!important;
+  scrollbar-color:auto!important;
+}
+html.tg-scrollbars::-webkit-scrollbar,html.tg-scrollbars *::-webkit-scrollbar{
+  display:block!important;width:10px!important;height:10px!important;
+  background:transparent!important;
+}
+html.tg-scrollbars::-webkit-scrollbar-track,html.tg-scrollbars *::-webkit-scrollbar-track,
+html.tg-scrollbars::-webkit-scrollbar-corner,html.tg-scrollbars *::-webkit-scrollbar-corner{
+  background:transparent!important;border:0!important;box-shadow:none!important;
+}
+html.tg-scrollbars::-webkit-scrollbar-thumb,html.tg-scrollbars *::-webkit-scrollbar-thumb{
+  min-width:28px;min-height:28px;border:2px solid transparent!important;
+  border-radius:20px!important;background-clip:padding-box!important;
+  background-color:rgba(var(--tg-scrollbar-rgb),var(--tg-scrollbar-opacity,0))!important;
+  box-shadow:none!important;
+}
+html.tg-scrollbars::-webkit-scrollbar-button,html.tg-scrollbars *::-webkit-scrollbar-button{
+  display:none!important;width:0!important;height:0!important;
+}
+/* A nested scroll area contains movement only while it actually overflows. */
+html.tg-scrollbars .tg-scrollbar-x{overscroll-behavior-x:contain!important}
+html.tg-scrollbars .tg-scrollbar-y{overscroll-behavior-y:contain!important}
+/* The theme strip already has its accessible, larger drag target below it. */
+html.tg-scrollbars #theme-options{scrollbar-width:none!important}
+html.tg-scrollbars #theme-options::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+html.tg-scrollbars #today .theme-carousel-range{
+  opacity:var(--tg-scrollbar-opacity,0);transition:none!important;background:transparent;
+}
+html.tg-scrollbars #today .theme-carousel-range:disabled{opacity:0}
+#today .theme-carousel-range::-webkit-slider-runnable-track,
+#today .theme-carousel-range::-moz-range-track{background:transparent!important;box-shadow:none!important;border:0!important}
+@supports not selector(::-webkit-scrollbar){
+  html.tg-scrollbars,html.tg-scrollbars *{
+    scrollbar-width:thin!important;
+    scrollbar-color:rgba(var(--tg-scrollbar-rgb),var(--tg-scrollbar-opacity,0)) transparent!important;
+  }
+  html.tg-scrollbars #theme-options{scrollbar-width:none!important}
+}
+/* iOS/iPadOS style native indicators through the standard property, not the
+   old WebKit pseudo elements. Older engines retain their system indicators. */
+@media(hover:none) and (pointer:coarse){
+  @supports(scrollbar-color:rgb(101,129,173) transparent){
+    html.tg-scrollbars,html.tg-scrollbars *{
+      scrollbar-width:thin!important;
+      scrollbar-color:rgba(var(--tg-scrollbar-rgb),var(--tg-scrollbar-opacity,0)) transparent!important;
+    }
+    html.tg-scrollbars #theme-options{scrollbar-width:none!important}
+  }
+}

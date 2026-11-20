@@ -1,0 +1,39 @@
+.account-trigger{border:1px solid #d9e0ec;border-radius:20px;padding:7px 13px;background:#fff;color:#5a6881;font:inherit;font-size:12px;white-space:nowrap}
+.account-dialog{width:min(620px,calc(100vw - 28px));max-height:calc(100dvh - 36px);overflow-y:auto;padding:26px;color:#293a51;background:#fff;border:1px solid #d9e2ec;border-radius:22px;box-shadow:0 20px 90px #17294030}
+.account-dialog::backdrop{background:#15243770;backdrop-filter:blur(4px)}
+.account-dialog *{box-sizing:border-box}
+.account-heading,.account-section-heading,.account-user,.account-inline{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.account-heading{align-items:flex-start;margin-bottom:22px}
+.account-heading h2{font-size:23px;margin:0;color:#293a51}
+.account-heading p{font-size:12px;color:#768296;margin:7px 0 0;overflow-wrap:anywhere}
+.account-close{display:grid;place-items:center;flex:none;width:32px;height:32px;padding:0;background:#f1f4f8;border-radius:50%;font-size:22px;color:#66768d}
+.account-dialog label{display:block;font-size:13px;color:#465a73;margin:15px 0 8px}
+.account-dialog input{width:100%;min-width:0;background:#fafbfd;border:1px solid #cbd7e5;border-radius:10px;padding:11px 12px;color:#2d4059;font:inherit;font-size:14px}
+.account-dialog button,.account-dialog summary,.account-dialog a{cursor:pointer}
+.account-dialog input:focus-visible,.account-dialog button:focus-visible,.account-dialog summary:focus-visible,.account-dialog a:focus-visible{outline:3px solid #91b7ed;outline-offset:3px}
+.account-inline input{flex:1}
+.account-primary{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;border:1px solid #365e9c;border-radius:10px;padding:11px 16px;background:#416cab;color:#fff;font:inherit;font-size:13px;box-shadow:none;text-decoration:none}
+.account-primary:disabled,.account-dialog button:disabled{opacity:.55;cursor:wait}
+.account-hint{font-size:11px!important;color:#77849a!important;line-height:1.7;margin:7px 0 15px}
+.account-message{font-size:12px!important;line-height:1.7;min-height:0;color:#4e6e9a!important;margin:10px 0;overflow-wrap:anywhere}
+.account-message:empty{display:none}
+.account-password,.account-create{border-top:1px solid #e1e7ef;padding-top:16px;margin-top:20px}
+.account-dialog summary{font-size:14px;color:#385b88;line-height:1.7}
+.account-password .account-primary,.account-create .account-primary{margin-top:16px}
+#account-admin{margin-top:24px;padding-top:22px;border-top:1px solid #dce5ef}
+.account-section-heading h3{font-size:17px;margin:0;color:#334964}
+.account-text{padding:5px 8px;background:transparent;border:0;color:#456da3;font:inherit;font-size:12px;white-space:nowrap}
+.account-users{display:grid;gap:8px;margin-top:10px}
+.account-user{padding:13px 12px;border:1px solid #e3e9f1;background:#f8fafd;border-radius:12px}
+.account-user>div:first-child{min-width:0}
+.account-user strong{font-size:14px;color:#344d68;overflow-wrap:anywhere}
+.account-user p{font-size:11px;color:#7a879b;margin:6px 0 0;overflow-wrap:anywhere}
+.account-user-actions{display:flex;flex:none;gap:3px}
+.account-invitation{padding:16px;margin-top:20px;background:#edf5ff;border:1px solid #c7dcf4;border-radius:12px}
+.account-invitation h4{margin:0 0 8px;font-size:15px;color:#355a89}
+.account-invitation>p{font-size:12px;color:#597291;overflow-wrap:anywhere}
+.account-invitation input{font-family:var(--font-body, sans-serif)!important;font-size:12px}
+.account-demo-banner{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:10px 16px;background:#fff3cf;color:#77612b;font-size:12px;line-height:1.6;text-align:center}
+.account-demo-banner a{color:#6b592c;text-underline-offset:3px;white-space:nowrap}
+#account-demo p{color:#68788b;font-size:14px}
+@media(max-width:520px){.account-trigger{padding:6px 10px;font-size:11px}.account-dialog{padding:21px 17px;max-height:calc(100dvh - 24px)}.account-inline{gap:8px}.account-primary{padding:11px 12px}.account-user{align-items:flex-start;flex-wrap:wrap}.account-user-actions{width:100%;justify-content:flex-end}.account-invitation .account-inline{flex-wrap:wrap}.account-invitation .account-inline input{flex-basis:100%}.account-invitation .account-primary{margin-left:auto}}

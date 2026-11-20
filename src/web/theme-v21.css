@@ -1,0 +1,47 @@
+/* Typography and the user-selected theme. The font file lives outside the repository. */
+
+@font-face{font-family:'Tiangong YaHei';src:local('Microsoft YaHei'),local('微软雅黑');font-weight:400;font-style:normal}
+@font-face{font-family:'Tiangong YaHei';src:local('Microsoft YaHei Bold'),local('微软雅黑 Bold');font-weight:700;font-style:normal}
+:root{--font-body:'Tiangong YaHei','Microsoft YaHei','微软雅黑','Microsoft YaHei UI','PingFang SC','Noto Sans CJK SC',sans-serif;--font-journal:'Microsoft YaHei','PingFang SC',sans-serif}
+body,button,input,textarea,select{font-family:var(--font-body)}
+.theme-picker{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 24px;border:1px solid #d8e1ee;background:#fff;border-radius:16px;margin-bottom:25px}
+.theme-picker h2{font-size:18px;margin:0 0 6px;color:#344b6c}
+.theme-picker p{font-size:12px;color:#8290a5;margin:0;line-height:1.7}
+.theme-options{display:flex;gap:12px;flex:none}
+.theme-option{display:flex;align-items:center;gap:11px;position:relative;text-align:left;border:1.5px solid #dce4ee;border-radius:12px;padding:12px 17px;color:#64748c;min-width:151px;background:#fafbfe}
+.theme-option[aria-pressed=true]{border-color:#6c92d7;box-shadow:0 0 0 2px #93b3e529;background:#f0f5ff;color:#395f99}
+.theme-option[aria-pressed=true]::after{content:'✓';position:absolute;top:2px;right:5px;font-size:11px}
+.theme-option strong{display:block;font-size:14px;font-weight:600;line-height:1.7}
+.theme-option small{display:block;font-size:10px;color:#8b98ab;line-height:1.7}
+.theme-swatch{height:36px;width:36px;flex:none;border-radius:7px;border:1px solid #9db3d0;background:linear-gradient(90deg,#20304d 28%,#eef2f8 28%);box-shadow:2px 2px 0 #d8e0ec}
+.theme-option[data-theme-choice=journal] .theme-swatch{background:linear-gradient(145deg,#fcf0b8 44%,#e6dcf5 45%,#e6dcf5 70%,#d8e8ff 71%);border-radius:5px 8px 4px 7px;transform:rotate(-6deg)}
+.theme-picker #theme-status{min-height:20px;font-size:11px;margin-top:5px}
+html[data-theme=journal] body{background:#f7f5ed;color:#45576e}
+html[data-theme=journal] body *{font-family:var(--font-journal)!important}
+html[data-theme=journal] main{background-image:radial-gradient(#b8bcc14a .8px,transparent .8px);background-size:18px 18px;min-height:100vh}
+html[data-theme=journal] header{background:#fffef8ed;border-bottom:1px dashed #b6c7d0}
+html[data-theme=journal] .breadcrumb strong{color:#405773}
+html[data-theme=journal] .sidebar{background:#eaf2fc;border-right:1px solid #bbcede;color:#435b77}
+html[data-theme=journal] .sidebar .brand{color:#34516d}
+html[data-theme=journal] .sidebar :is(.brand small,.space){color:#768da5}
+html[data-theme=journal] .sidebar .seal{background:#6d9deb;box-shadow:2px 3px 0 #38598d;border:1.5px solid #416183;border-radius:15px 19px 12px 17px;transform:rotate(-5deg)}
+html[data-theme=journal] .sidebar nav button{color:#5e7692}
+html[data-theme=journal] .sidebar nav button:hover{background:#dbe9fa}
+html[data-theme=journal] .sidebar nav button.active{background:#bcd5ff;color:#345c91;border:1.5px solid #6d91c5;border-radius:12px 17px 13px 18px;box-shadow:2px 3px 0 #8daed144;transform:rotate(-1deg)}
+html[data-theme=journal] .sidebar .daily-quote{border-color:#b8ccdf}
+html[data-theme=journal] .sidebar .daily-quote p{color:#546e8a}
+html[data-theme=journal] .sidebar .daily-quote>span,html[data-theme=journal] .sidebar .daily-quote small{color:#849ab0}
+html[data-theme=journal] .theme-picker{background:#fffef8;border:1.3px solid #bccadd;border-radius:8px 13px 6px 11px;box-shadow:3px 4px 0 #dbe3eb}
+html[data-theme=journal] .theme-picker h2{font-size:24px}
+html[data-theme=journal] .theme-option{border-radius:7px 11px 6px 9px;background:#fffdf7}
+html[data-theme=journal] .theme-option[aria-pressed=true]{background:#f6edcd;border-color:#bfab6c;box-shadow:2px 3px 0 #e6d9a2}
+html[data-theme=journal] .theme-option strong{font-size:18px;font-weight:400}
+html[data-theme=journal] #today .greeting{background:#fffefa;border:1px solid #c6d3e1;border-radius:9px 14px 6px 11px;box-shadow:4px 5px 0 #dce4ec}
+html[data-theme=journal] #today .panel{background:#fffefa;border:1px solid #c6d3e1;border-radius:9px 14px 6px 11px}
+html[data-theme=journal] #todos{--journal-hand:var(--font-journal)}
+html[data-theme=journal] #notes{--note-hand:var(--font-journal)}
+/* User-authored text and measured values always use the reading typeface. */
+html body :is(.note-content,.note-content *,#note-input,#note-input *,input,textarea,.todo-name,.todo-name *,.todo-note-preview,.todo-calendar-event,.todo-calendar-event *,#todo-edit-title,#todo-edit-note,.work-table tbody,.work-table tbody *,.daily-quote p,.report-note,.report-metric dd,.report-metric dd *,.body-value,.body-value *,.health-measures b,.exercise-numbers b,.body-trend-values,.body-trend-values *,.body-trend-tooltip,.body-trend-tooltip *,.note-draft-asset>span){font-family:var(--font-body)!important}
+html body #note-input:empty::before{font-family:var(--font-body)!important}
+@media(max-width:700px){.theme-picker{padding:18px 16px;align-items:stretch;flex-direction:column;gap:12px}.theme-options{gap:10px;display:grid;grid-template-columns:1fr 1fr}.theme-option{min-width:0;padding:12px 10px;gap:8px}.theme-swatch{width:29px;height:32px}.theme-option strong{font-size:13px}.theme-option small{font-size:9px}html[data-theme=journal] .theme-option strong{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.theme-option{transition:none}}

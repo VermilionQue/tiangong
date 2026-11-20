@@ -1,0 +1,40 @@
+{
+  "shell": [
+    "style.css",
+    "theme-v15.css",
+    "todos-v16.css",
+    "theme-base-v21.css"
+  ],
+  "middle": [
+    "wellness-v20.css",
+    "notes-v15.css"
+  ],
+  "app": [
+    "wellness-v21.css",
+    "theme-v21.css",
+    "travel-v23.css",
+    "mobile-v23.css",
+    "finance-v25.css",
+    "todos-v26.css",
+    "todo-sync.css",
+    "treasures-v30.css",
+    "weather-v30.css",
+    "improvements-v30.css",
+    "receipts-v33.css",
+    "accounts-v33.css",
+    "finance-hub-v34.css",
+    "scrollbars-v34.css",
+    "today-v40.css",
+    "finance-layout-v40.css",
+    "debt-layout-v40.css",
+    "finance-cards-v41.css",
+    "budget-details-v41.css",
+    "people-v42.css",
+    "legrand-crm-v43.css",
+    "experience-v44.css",
+    "experience-v45.css",
+    "experience-v46.css",
+    "recipes-v1.css",
+    "theme-picker.css"
+  ]
+}

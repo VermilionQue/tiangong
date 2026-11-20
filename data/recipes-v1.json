@@ -1,0 +1,864 @@
+[
+  {
+    "id": "seed-1",
+    "name": "红烧肉",
+    "category": "荤菜",
+    "minutes": 60,
+    "ingredients": [
+      {
+        "name": "五花肉",
+        "quantity": 500.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "葱",
+        "quantity": 3.0,
+        "unit": "根",
+        "note": ""
+      },
+      {
+        "name": "姜",
+        "quantity": 5.0,
+        "unit": "片",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "生抽",
+        "quantity": 2.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "老抽",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "料酒",
+        "quantity": 2.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "冰糖",
+        "quantity": 15.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "八角",
+        "quantity": 2.0,
+        "unit": "个",
+        "note": ""
+      }
+    ],
+    "steps": [
+      "五花肉切块冷水下锅焯水，煮出浮沫后捞出洗净",
+      "锅中放少许油，小火将冰糖炒至焦糖色",
+      "放入五花肉翻炒上色，加姜片和葱段爆香",
+      "加生抽、老抽、料酒调味，倒入没过肉的热水",
+      "大火烧开后转小火炖40分钟，最后大火收汁即可"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蛋白"
+    ]
+  },
+  {
+    "id": "seed-2",
+    "name": "番茄炒蛋",
+    "category": "快手",
+    "minutes": 10,
+    "ingredients": [
+      {
+        "name": "番茄",
+        "quantity": 2.0,
+        "unit": "个",
+        "note": ""
+      },
+      {
+        "name": "鸡蛋",
+        "quantity": 3.0,
+        "unit": "个",
+        "note": ""
+      },
+      {
+        "name": "葱花",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "盐",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      },
+      {
+        "name": "白糖",
+        "quantity": null,
+        "unit": "g",
+        "note": "少许"
+      },
+      {
+        "name": "食用油",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      }
+    ],
+    "steps": [
+      "番茄洗净切块，鸡蛋打散，加少许盐",
+      "热锅放油，倒入蛋液炒至凝固，盛出备用",
+      "锅中补少许油，放入番茄炒出汁",
+      "倒回鸡蛋，加盐和少许糖炒匀，撒上葱花"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蛋白",
+      "蔬菜"
+    ]
+  },
+  {
+    "id": "seed-3",
+    "name": "蒜蓉西兰花",
+    "category": "素菜",
+    "minutes": 15,
+    "ingredients": [
+      {
+        "name": "西兰花",
+        "quantity": 1.0,
+        "unit": "颗",
+        "note": ""
+      },
+      {
+        "name": "蒜",
+        "quantity": 4.0,
+        "unit": "瓣",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "盐",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      },
+      {
+        "name": "蚝油",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "食用油",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      }
+    ],
+    "steps": [
+      "西兰花切小朵洗净，蒜切末",
+      "水烧开后加入少许盐，西兰花焯至断生沥干",
+      "热锅放油，炒香蒜末",
+      "倒入西兰花，加蚝油和少许盐翻炒均匀"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蔬菜"
+    ]
+  },
+  {
+    "id": "seed-4",
+    "name": "紫菜蛋花汤",
+    "category": "汤羹",
+    "minutes": 10,
+    "ingredients": [
+      {
+        "name": "紫菜",
+        "quantity": 5.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "鸡蛋",
+        "quantity": 2.0,
+        "unit": "个",
+        "note": ""
+      },
+      {
+        "name": "虾皮",
+        "quantity": 10.0,
+        "unit": "g",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "盐",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      },
+      {
+        "name": "芝麻油",
+        "quantity": null,
+        "unit": "g",
+        "note": "少许"
+      },
+      {
+        "name": "胡椒粉",
+        "quantity": null,
+        "unit": "g",
+        "note": "少许"
+      }
+    ],
+    "steps": [
+      "鸡蛋打散，紫菜和虾皮按包装说明处理",
+      "锅中加入清水，烧开后放虾皮和紫菜",
+      "保持微沸，慢慢淋入蛋液至蛋花凝固",
+      "用盐和胡椒粉调味，出锅前滴入芝麻油"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蛋白"
+    ]
+  },
+  {
+    "id": "seed-5",
+    "name": "可乐鸡翅",
+    "category": "荤菜",
+    "minutes": 30,
+    "ingredients": [
+      {
+        "name": "鸡翅中",
+        "quantity": 8.0,
+        "unit": "个",
+        "note": ""
+      },
+      {
+        "name": "可乐",
+        "quantity": 330.0,
+        "unit": "ml",
+        "note": ""
+      },
+      {
+        "name": "葱",
+        "quantity": 2.0,
+        "unit": "根",
+        "note": ""
+      },
+      {
+        "name": "姜",
+        "quantity": 3.0,
+        "unit": "片",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "生抽",
+        "quantity": 2.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "老抽",
+        "quantity": null,
+        "unit": "g",
+        "note": "半勺"
+      },
+      {
+        "name": "料酒",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      }
+    ],
+    "steps": [
+      "鸡翅冷水入锅，加姜片和料酒焯水，捞出沥干",
+      "平底锅小火煎鸡翅，煎至两面微黄",
+      "加入可乐、葱段、生抽和老抽",
+      "煮开后转小火焖20分钟至鸡翅熟透，最后收汁"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蛋白"
+    ]
+  },
+  {
+    "id": "seed-6",
+    "name": "酸辣土豆丝",
+    "category": "快手",
+    "minutes": 15,
+    "ingredients": [
+      {
+        "name": "土豆",
+        "quantity": 2.0,
+        "unit": "个",
+        "note": ""
+      },
+      {
+        "name": "干辣椒",
+        "quantity": 5.0,
+        "unit": "个",
+        "note": ""
+      },
+      {
+        "name": "蒜",
+        "quantity": 3.0,
+        "unit": "瓣",
+        "note": ""
+      },
+      {
+        "name": "青椒",
+        "quantity": 1.0,
+        "unit": "个",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "盐",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      },
+      {
+        "name": "醋",
+        "quantity": 2.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "食用油",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      }
+    ],
+    "steps": [
+      "土豆切细丝，用清水冲洗淀粉后沥干",
+      "青椒切丝，蒜切末，干辣椒切段",
+      "热锅放油，炒香蒜和干辣椒，放入土豆丝翻炒",
+      "加入青椒丝、盐和醋，炒熟即可"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蔬菜"
+    ]
+  },
+  {
+    "id": "seed-7",
+    "name": "冬瓜排骨汤",
+    "category": "汤羹",
+    "minutes": 50,
+    "ingredients": [
+      {
+        "name": "排骨",
+        "quantity": 500.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "冬瓜",
+        "quantity": 300.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "葱",
+        "quantity": 2.0,
+        "unit": "根",
+        "note": ""
+      },
+      {
+        "name": "姜",
+        "quantity": 4.0,
+        "unit": "片",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "盐",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      },
+      {
+        "name": "料酒",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "胡椒粉",
+        "quantity": null,
+        "unit": "g",
+        "note": "少许"
+      }
+    ],
+    "steps": [
+      "排骨冷水入锅，加料酒焯水，捞出洗净",
+      "排骨和姜片入汤锅，加足量热水煮开",
+      "转小火炖30分钟，冬瓜去皮切块",
+      "加入冬瓜继续炖至排骨熟透、冬瓜软烂，加盐和胡椒粉，撒葱花"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蛋白",
+      "蔬菜"
+    ]
+  },
+  {
+    "id": "seed-8",
+    "name": "麻婆豆腐",
+    "category": "荤菜",
+    "minutes": 20,
+    "ingredients": [
+      {
+        "name": "嫩豆腐",
+        "quantity": 1.0,
+        "unit": "块",
+        "note": ""
+      },
+      {
+        "name": "猪肉末",
+        "quantity": 100.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "蒜苗",
+        "quantity": 2.0,
+        "unit": "根",
+        "note": ""
+      },
+      {
+        "name": "蒜",
+        "quantity": 3.0,
+        "unit": "瓣",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "豆瓣酱",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "生抽",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "花椒",
+        "quantity": null,
+        "unit": "g",
+        "note": "少许"
+      },
+      {
+        "name": "淀粉",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "食用油",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      }
+    ],
+    "steps": [
+      "豆腐切块，在淡盐水中焯一下；蒜苗切段",
+      "热锅放油，将肉末炒熟，加入蒜末和豆瓣酱炒香",
+      "加适量水和生抽，放入豆腐小火煮5分钟",
+      "淀粉加水调匀，淋入锅中勾芡，撒花椒粉和蒜苗再煮片刻"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蛋白",
+      "辣"
+    ]
+  },
+  {
+    "id": "seed-9",
+    "name": "宫保鸡丁",
+    "category": "荤菜",
+    "minutes": 20,
+    "ingredients": [
+      {
+        "name": "鸡胸肉",
+        "quantity": 200.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "花生米",
+        "quantity": 50.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "黄瓜",
+        "quantity": null,
+        "unit": "g",
+        "note": "半根"
+      },
+      {
+        "name": "干辣椒",
+        "quantity": 6.0,
+        "unit": "个",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "生抽",
+        "quantity": 2.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "醋",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "白糖",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "淀粉",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "食用油",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      }
+    ],
+    "steps": [
+      "鸡胸肉切丁，用少许生抽和淀粉腌制；黄瓜切丁",
+      "将生抽、醋、糖、淀粉和少许水调成料汁",
+      "热锅放油，炒香干辣椒，放鸡丁炒至完全熟透",
+      "倒入黄瓜丁和料汁翻炒，收汁后放熟花生米拌匀"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蛋白",
+      "花生",
+      "辣"
+    ]
+  },
+  {
+    "id": "seed-10",
+    "name": "清炒时蔬",
+    "category": "素菜",
+    "minutes": 6,
+    "ingredients": [
+      {
+        "name": "时令蔬菜",
+        "quantity": 300.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "蒜",
+        "quantity": 3.0,
+        "unit": "瓣",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "盐",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      },
+      {
+        "name": "食用油",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      }
+    ],
+    "steps": [
+      "选择易熟的绿叶蔬菜，洗净沥干，蒜切片",
+      "热锅放油，蒜片炒香",
+      "放入蔬菜大火翻炒至熟，加适量盐调味"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蔬菜"
+    ]
+  },
+  {
+    "id": "seed-11",
+    "name": "干煸四季豆",
+    "category": "荤菜",
+    "minutes": 15,
+    "ingredients": [
+      {
+        "name": "四季豆",
+        "quantity": 300.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "肉末",
+        "quantity": 50.0,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "蒜",
+        "quantity": 3.0,
+        "unit": "瓣",
+        "note": ""
+      },
+      {
+        "name": "干辣椒",
+        "quantity": 3.0,
+        "unit": "个",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "生抽",
+        "quantity": 1.0,
+        "unit": "勺",
+        "note": ""
+      },
+      {
+        "name": "盐",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      },
+      {
+        "name": "食用油",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      }
+    ],
+    "steps": [
+      "四季豆去筋洗净切段，充分沥干水分",
+      "锅中放油，中小火煸炒四季豆至表皮起皱、内部完全熟透，盛出",
+      "用底油将肉末炒熟，加入蒜末和干辣椒炒香",
+      "倒回四季豆，加生抽和盐炒匀；不要食用未熟的四季豆"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蔬菜",
+      "蛋白"
+    ]
+  },
+  {
+    "id": "seed-12",
+    "name": "西红柿鸡蛋汤",
+    "category": "汤羹",
+    "minutes": 8,
+    "ingredients": [
+      {
+        "name": "番茄",
+        "quantity": 1.0,
+        "unit": "个",
+        "note": ""
+      },
+      {
+        "name": "鸡蛋",
+        "quantity": 2.0,
+        "unit": "个",
+        "note": ""
+      },
+      {
+        "name": "香菜",
+        "quantity": null,
+        "unit": "g",
+        "note": "少许"
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "盐",
+        "quantity": null,
+        "unit": "g",
+        "note": "适量"
+      },
+      {
+        "name": "芝麻油",
+        "quantity": null,
+        "unit": "g",
+        "note": "少许"
+      },
+      {
+        "name": "食用油",
+        "quantity": null,
+        "unit": "g",
+        "note": "少许"
+      }
+    ],
+    "steps": [
+      "番茄洗净切块，鸡蛋打散",
+      "锅中放少许油，将番茄炒软后加清水煮开",
+      "慢慢倒入蛋液，煮至蛋花凝固",
+      "加盐调味，撒香菜，滴入芝麻油"
+    ],
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蛋白",
+      "蔬菜"
+    ]
+  },
+  {
+    "id": "seed-13",
+    "name": "米饭",
+    "category": "主食",
+    "minutes": 30,
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "主食"
+    ],
+    "ingredients": [
+      {
+        "name": "大米",
+        "quantity": 150,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 220,
+        "unit": "ml",
+        "note": ""
+      }
+    ],
+    "seasonings": [],
+    "steps": [
+      "淘洗大米，按米种与电饭煲水位线加水。",
+      "启动煮饭程序，完成后焖一会儿再松散米饭。"
+    ]
+  },
+  {
+    "id": "seed-14",
+    "name": "杂粮饭",
+    "category": "主食",
+    "minutes": 40,
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "主食"
+    ],
+    "ingredients": [
+      {
+        "name": "大米",
+        "quantity": 100,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "燕麦米",
+        "quantity": 30,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "小米",
+        "quantity": 20,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 250,
+        "unit": "ml",
+        "note": ""
+      }
+    ],
+    "seasonings": [],
+    "steps": [
+      "按所用杂粮包装说明预先浸泡或处理。",
+      "洗净后与大米同煮，水量按电饭煲说明调整。"
+    ]
+  },
+  {
+    "id": "seed-15",
+    "name": "清蒸鲈鱼",
+    "category": "荤菜",
+    "minutes": 20,
+    "servings": 2,
+    "source": "基础参考",
+    "tags": [
+      "蛋白",
+      "鱼"
+    ],
+    "ingredients": [
+      {
+        "name": "鲈鱼",
+        "quantity": 500,
+        "unit": "g",
+        "note": ""
+      },
+      {
+        "name": "姜",
+        "quantity": 5,
+        "unit": "片",
+        "note": ""
+      },
+      {
+        "name": "葱",
+        "quantity": 2,
+        "unit": "根",
+        "note": ""
+      }
+    ],
+    "seasonings": [
+      {
+        "name": "生抽",
+        "quantity": 1,
+        "unit": "勺",
+        "note": ""
+      }
+    ],
+    "steps": [
+      "鱼去鳞、鳃和内脏，洗净沥干，铺上葱姜。",
+      "水沸后入锅蒸至鱼肉熟透，时间按鱼身厚度调整。",
+      "倒去蒸汁，去掉旧葱姜，调味后撒上新葱丝。"
+    ]
+  }
+]

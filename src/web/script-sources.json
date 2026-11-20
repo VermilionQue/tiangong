@@ -1,0 +1,26 @@
+{
+  "core": [
+    "confirm-v46.js",
+    "app.js",
+    "finance-hub-v34.js"
+  ],
+  "modules": [
+    "receipts.js",
+    "accounts-v33.js",
+    "wellness.js",
+    "notes.js",
+    "todo-calendar.js",
+    "todos.js",
+    "todo-sync.js",
+    "travel.js",
+    "treasures.js",
+    "weather.js",
+    "improvements-v30.js",
+    "people.js",
+    "recipes.js",
+    "navigation.js",
+    "scrollbars-v34.js",
+    "today-v40.js",
+    "legrand-crm.js"
+  ]
+}

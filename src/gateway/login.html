@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>登录 · 天工录</title>
+  <link rel="stylesheet" href="/auth/login.css">
+  <script src="/auth/login.js" defer></script>
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="天工录"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#f7f8fb"><link rel="manifest" href="/app.webmanifest"><link rel="icon" href="/icons/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="167x167" href="/icons/apple-touch-icon-167.png"><link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152.png">
+</head>
+<body class="gateway-login">
+  <main class="gateway-card">
+    <div class="gateway-mark" aria-hidden="true">✧</div>
+    <p class="gateway-eyebrow">TIANGONG JOURNAL</p>
+    <h1>回到自己的空间。</h1>
+    <p class="gateway-description">把日子理清楚，把每一步留下来。</p>
+    <form id="gateway-login-form" action="/auth/login" method="post" autocomplete="on">
+      <label for="gateway-username">用户名</label>
+      <input class="gateway-username" id="gateway-username" name="username" type="text" value="admin" autocomplete="username" autocapitalize="none" spellcheck="false" required maxlength="64">
+      <label for="gateway-password">登录密码</label>
+      <div class="gateway-password-wrap">
+        <input id="gateway-password" name="password" type="password" autocomplete="current-password" required maxlength="1024" autofocus>
+        <button type="button" id="gateway-show" aria-label="显示密码">显示</button>
+      </div>
+      <label class="gateway-remember" for="gateway-remember">
+        <input id="gateway-remember" name="remember" type="checkbox" value="1" checked>
+        <span>保持登录 30 天</span>
+      </label>
+      <p class="gateway-remember-hint">在共用设备上，请取消勾选。</p>
+      <p id="gateway-message" role="alert" aria-live="polite"><!-- gateway-message --></p>
+      <button id="gateway-submit" type="submit">进入天工录 <span aria-hidden="true">→</span></button>
+    </form>
+    <form id="gateway-guest-form" action="/auth/guest" method="post" class="gateway-demo-form" style="margin-top:16px"><input type="hidden" name="start" value="1"><button type="submit" style="width:100%;padding:13px 16px;border:1px solid #cbd7e8;border-radius:12px;background:#f4f7fc;color:#4f6c98;font:inherit;font-size:14px;cursor:pointer">游客体验 · 无需密码</button><p style="color:#667892;font-size:13px;text-align:center">独立示例资料，可以自由试用各项功能。</p></form>
+    <p class="gateway-footnote">只属于你的记录与生活。</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,1 @@
+const fs=require('node:fs');const {minify}=require('terser');(async()=>{const result=await minify(fs.readFileSync(process.argv[2],'utf8'),{compress:true,mangle:true,format:{comments:false}});process.stdout.write(result.code+'\n')})().catch(e=>{console.error(e.message);process.exit(1)});

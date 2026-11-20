@@ -1,0 +1,64 @@
+/* Balance and wish shelves share the compact debt layout and the active theme. */
+#finance:is([data-finance-view="accounts"],[data-finance-view="wishes"]) .fh-heading{margin:20px 0 22px}
+#finance:is([data-finance-view="accounts"],[data-finance-view="wishes"]) .fh-heading .eyebrow{display:none}
+#finance:is([data-finance-view="accounts"],[data-finance-view="wishes"]) .fh-heading h1{font-size:clamp(24px,2.5vw,32px);line-height:1.45;margin-bottom:8px}
+#finance:is([data-finance-view="accounts"],[data-finance-view="wishes"]) .fh-heading p{font-size:13px;line-height:1.7}
+:is(#fh-accounts,#fh-wishes){min-width:0}
+#fh-accounts .fh-compact-stats{display:grid;grid-template-columns:1.15fr 1.15fr 1fr .8fr;gap:0;border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:12px 0;margin:10px 0 0;box-shadow:none}
+#fh-accounts .fh-compact-stats .fh-stat{display:flex;flex-direction:column;gap:4px;min-width:0;padding:0 20px;border:0;border-radius:0;background:none;box-shadow:none;color:var(--ink)}
+#fh-accounts .fh-compact-stats .fh-stat+.fh-stat{border-left:1px solid var(--line)}
+#fh-accounts .fh-compact-stats small{font-size:11px;line-height:1.4;color:var(--muted)}
+#fh-accounts .fh-compact-stats strong{font-size:22px;line-height:1.25;margin:0;letter-spacing:-.5px;overflow-wrap:anywhere}
+#fh-accounts .fh-compact-stats p{font-size:10px;line-height:1.5;margin:0;color:var(--muted)}
+#fh-accounts .fh-account-method{font-size:10px;line-height:1.8;color:var(--muted);margin:7px 2px 20px}
+#fh-accounts .fh-account-method summary{cursor:pointer;width:max-content;max-width:100%}
+#fh-accounts .fh-account-method p{margin:6px 0;max-width:850px}
+:is(#fh-accounts,#fh-wishes) .fh-compact-section-heading{margin:0 0 14px;align-items:center;gap:14px}
+:is(#fh-accounts,#fh-wishes) .fh-compact-section-heading h2{font-size:22px;margin:0 0 4px;line-height:1.5}
+:is(#fh-accounts,#fh-wishes) .fh-compact-section-heading p{font-size:11px;margin:0;line-height:1.6}
+:is(#fh-accounts,#fh-wishes) .fh-compact-section-heading>.primary{font-size:12px;padding:11px 15px;white-space:nowrap}
+:is(#fh-accounts,#fh-wishes) .fh-compact-strip{display:flex;flex-wrap:nowrap;align-items:flex-start;gap:14px;overflow-x:auto;overflow-y:hidden;max-width:100%;padding:2px 2px 15px;margin:0 0 18px;scroll-padding:2px;overscroll-behavior-x:contain}
+:is(#fh-accounts,#fh-wishes) .fh-compact-strip:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+:is(#fh-accounts,#fh-wishes) .fh-compact-strip>.fh-empty{flex:1 0 100%;box-sizing:border-box}
+:is(#fh-accounts,#fh-wishes) .fh-compact-card{flex:0 0 220px;width:220px;min-width:220px;max-width:220px;display:flex;flex-direction:column;gap:12px;padding:17px 16px 12px;border:1px solid var(--line);border-radius:15px;box-shadow:none;background:var(--paper);color:var(--ink)}
+:is(#fh-accounts,#fh-wishes) .fh-compact-title>small{font-size:10px;line-height:1.4;color:var(--muted)}
+:is(#fh-accounts,#fh-wishes) .fh-compact-card h3{font-size:15px;line-height:1.5;margin:6px 0 0;min-height:45px;overflow-wrap:anywhere}
+:is(#fh-accounts,#fh-wishes) .fh-compact-balance>small{font-size:10px;line-height:1.6;color:var(--muted);display:block}
+:is(#fh-accounts,#fh-wishes) .fh-compact-card .fh-value{font-size:23px;line-height:1.4;letter-spacing:-.6px;margin:3px 0 0;overflow-wrap:anywhere}
+:is(#fh-accounts,#fh-wishes) .fh-compact-meta{font-size:10px;line-height:1.7;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:var(--muted)}
+:is(#fh-accounts,#fh-wishes) .fh-compact-state{font-size:10px;color:var(--accent);line-height:1.6;min-height:16px;margin:0}
+:is(#fh-accounts,#fh-wishes) .fh-compact-state.pending{color:var(--muted)}
+:is(#fh-accounts,#fh-wishes) .fh-compact-actions{display:flex;flex-direction:column;margin-top:0}
+:is(#fh-accounts,#fh-wishes) .fh-compact-actions>button{width:100%;padding:9px 7px;font-size:11px;line-height:1.6;white-space:normal;min-height:34px;border-radius:8px;box-shadow:none;overflow-wrap:anywhere}
+:is(#fh-accounts,#fh-wishes) .fh-compact-details{border-top:1px solid var(--line);padding-top:9px;font-size:11px;line-height:1.7;margin-top:-3px;min-width:0}
+:is(#fh-accounts,#fh-wishes) .fh-compact-details>summary{color:var(--muted);cursor:pointer;line-height:1.7}
+:is(#fh-accounts,#fh-wishes) .fh-compact-details>.fh-detail{grid-template-columns:1fr;margin:12px 0;gap:3px}
+:is(#fh-accounts,#fh-wishes) .fh-compact-details .fh-detail dt{font-size:10px;margin-top:5px;color:var(--muted)}
+:is(#fh-accounts,#fh-wishes) .fh-compact-details .fh-detail dd{font-size:12px;text-align:left;overflow-wrap:anywhere}
+:is(#fh-accounts,#fh-wishes) .fh-compact-details .fh-source{font-size:10px;overflow-wrap:anywhere;margin-top:10px}
+:is(#fh-accounts,#fh-wishes) .fh-compact-details>.fh-caption{font-size:10px;margin-top:10px!important}
+#fh-wishes .fh-compact-rule{padding:15px 20px;margin:10px 0 20px;background:var(--paper);border-radius:16px;font-size:12px;line-height:1.7}
+#fh-wishes .fh-compact-rule strong{font-size:16px}
+#fh-wishes .fh-compact-rule p{margin:4px 0 0;color:var(--muted)}
+#fh-wishes .fh-compact-rule details{font-size:10px;line-height:1.7;margin-top:4px;color:var(--muted)}
+#fh-wishes .fh-compact-rule summary{cursor:pointer;width:max-content;max-width:100%}
+#fh-wishes .fh-wish-progress-detail{font-size:10px;grid-template-columns:auto 1fr;gap:4px 8px;line-height:1.7}
+#fh-wishes .fh-wish-progress-detail dd{font-size:11px;color:var(--ink)}
+html body :is(#fh-accounts,#fh-wishes) :is(.fh-value,.fh-compact-meta,.fh-compact-stats strong){font-family:var(--font-body,"Microsoft YaHei",sans-serif)!important;font-variant-numeric:tabular-nums}
+html[data-theme="journal"] :is(#fh-accounts,#fh-wishes) :is(.fh-compact-card,.fh-compact-stats,.fh-compact-rule){border-radius:9px 13px 8px 12px}
+
+@media(max-width:1050px){
+ #fh-accounts .fh-compact-stats .fh-stat{padding:0 13px}
+ #fh-accounts .fh-compact-stats strong{font-size:19px}
+}
+@media(max-width:720px){
+ #fh-accounts .fh-compact-stats{grid-template-columns:1fr 1fr;padding:0;gap:0;border-radius:13px}
+ #fh-accounts .fh-compact-stats .fh-stat{padding:12px 14px;gap:5px}
+ #fh-accounts .fh-compact-stats .fh-stat:nth-child(3){border-left:0}
+ #fh-accounts .fh-compact-stats .fh-stat:nth-child(n+3){border-top:1px solid var(--line)}
+ #fh-accounts .fh-compact-stats strong{font-size:19px;letter-spacing:-.4px}
+ :is(#fh-accounts,#fh-wishes) .fh-compact-section-heading{flex-wrap:wrap}
+ :is(#fh-accounts,#fh-wishes) .fh-compact-section-heading h2{font-size:21px}
+ :is(#fh-accounts,#fh-wishes) .fh-compact-strip{gap:12px}
+ #fh-wishes .fh-compact-rule{padding:13px 14px}
+}

@@ -1,0 +1,132 @@
+/* V16: one agenda, a quiet someday note, and an Outlook-inspired month. */
+body[data-view=todos] .content{padding:26px 30px;max-width:none}
+#todos{--todo-blue:#3975df;--todo-ink:#243650;--todo-muted:#71819a;--todo-line:#e2e8f1;color:var(--todo-ink)}
+#todos [hidden]{display:none!important}
+#todos .todo-workspace{display:grid;grid-template-columns:minmax(350px,.85fr) minmax(490px,1.15fr);gap:24px;align-items:start}
+#todos .todo-main{min-width:0;background:#fff;border:1px solid var(--todo-line);border-radius:18px;padding:26px 28px;min-height:740px;box-shadow:0 8px 28px #1c355704}
+#todos .todo-main-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}
+#todos .todo-eyebrow{font-size:10px;letter-spacing:1.5px;color:#7b8ca6}
+#todos .todo-main-heading h2{margin:9px 0 0;font-size:25px;font-weight:680;letter-spacing:.3px}
+#todos .todo-list-total{font-size:11px;color:#73839b;background:#f1f5fb;padding:7px 10px;border-radius:7px;white-space:nowrap}
+#todos .todo-filters{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--todo-line);padding-bottom:13px;margin-bottom:16px}
+#todos .todo-filters button{font-size:12px;color:#7b899f;padding:8px 10px;border-radius:6px;white-space:nowrap}
+#todos .todo-filters button:hover{background:#f2f5fb}
+#todos .todo-filters .selected{background:#eaf1ff;color:#3269c8;font-weight:650}
+#todos .todo-search{display:flex;justify-content:flex-start;align-items:center;gap:9px;margin:0 0 18px;color:#94a3b8}
+#todos .todo-search svg{height:17px;width:17px;flex:none}
+#todos .todo-search input{border:0;background:none;width:100%;font-size:13px;color:#3c4e68;padding:6px 0;min-width:0}
+#todos input::placeholder,#todos textarea::placeholder{color:#94a1b4}
+#todos .todo-quick{padding:0;background:#f7f9fd;border:1px solid #dfe6f2;border-radius:10px;overflow:hidden;margin-bottom:20px}
+#todos .todo-quick-title{display:flex;gap:10px;align-items:center;padding:13px 14px}
+#todos .todo-quick-title>span{font-size:23px;color:#6b91cd}
+#todos .todo-quick-title input{flex:1;min-width:0;border:0;background:none;font-size:14px;color:#2d415f;padding:3px 0}
+#todos .todo-quick-options{display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-top:1px solid #e4eaf4;padding:10px 12px}
+#todos .todo-quick-options label{display:flex;gap:4px;align-items:center;font-size:11px;color:#71829c;white-space:nowrap}
+#todos .todo-quick-options input[type=date],#todos .todo-quick-options input[type=time]{border:0;background:none;border-radius:0;font:inherit;color:#3e5474;padding:3px 0;min-width:0}
+#todos .todo-quick-options input[type=date]{width:117px}
+#todos .todo-quick-options input[type=time]{width:85px}
+#todos .todo-important-option input{margin:0;width:13px;height:13px;accent-color:#3975df}
+#todos .primary{background:#3975df;box-shadow:none;border:0;border-radius:7px;font-size:12px;min-height:34px;padding:8px 15px;color:white}
+#todos .todo-quick-options .primary{margin-left:auto}
+#todos .todo-list-caption{display:flex;align-items:center;gap:10px;margin:18px 0 6px;color:#8390a5;font-size:11px;line-height:1.6}
+#todos #todo-visible-count{margin-left:auto;white-space:nowrap}
+#todos #todo-clear-day{font-size:10px;color:#3975df;padding:0}
+#todos .todo-list{padding:0;min-height:0;border:0;background:none;box-shadow:none}
+#todos .todo-day-heading{display:flex;align-items:center;gap:10px;padding:22px 0 10px;margin:0;font-size:13px;font-weight:650;color:#526a8f}
+#todos .todo-day-heading small{font-size:10px;font-weight:400;color:#a57489}
+#todos .todo-row{display:flex;gap:11px;align-items:flex-start;margin:0;padding:17px 0;border-bottom:1px solid #edf0f5;min-width:0;overflow:hidden;box-sizing:border-box}
+#todos .todo-row:last-child{border-bottom:1px solid #edf0f5}
+#todos .todo-check{width:20px;height:20px;min-width:20px;border:1.5px solid #becadc;border-radius:50%;background:#fff;color:#fff;padding:1px;margin:2px 0 0;display:grid;place-items:center;transition:background .18s,border-color .18s;position:relative}
+#todos .todo-check::before{content:'';position:absolute;inset:-6px}
+#todos .todo-check svg{width:16px;height:16px;opacity:0}
+#todos .todo-check:hover{border-color:#3975df;box-shadow:0 0 0 3px #3975df0b}
+#todos .todo-check[aria-checked=true]{background:#3975df;border-color:#3975df}
+#todos .todo-check[aria-checked=true] svg{opacity:1}
+#todos .todo-row-time{width:43px;flex:none;font-size:12px;color:#4e6587;font-variant-numeric:tabular-nums;line-height:24px}
+#todos .todo-row-time small{display:block;font-size:9px;line-height:14px;color:#97a2b4}
+#todos .todo-row-main{display:block;flex:1;min-width:0;text-align:left;padding:0;color:inherit}
+#todos .todo-name{display:block;font-size:14px;line-height:1.75;font-weight:500;color:#2d3f59;overflow-wrap:anywhere}
+#todos .todo-note-preview{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:11px;color:#8a97aa;line-height:1.75;margin-top:4px}
+#todos .completed .todo-name,#todos .is-completing .todo-name{text-decoration:line-through;color:#8b9bb2}
+#todos .todo-row-actions{display:flex;flex:none}
+#todos .todo-row-actions button{font-size:21px;line-height:24px;width:24px;padding:0;color:#b2bfd1}
+#todos .todo-row-actions button.is-important{color:#6385c2}
+#todos .todo-row-actions .todo-restore{font-size:11px;width:auto;color:#3975df}
+#todos .todo-empty{text-align:center;padding:70px 12px;color:#8797ae}
+#todos .todo-empty>span{display:inline-grid;place-items:center;width:45px;height:45px;border-radius:50%;background:#eef3fb;color:#8ba4ca;font-size:23px}
+#todos .todo-empty h3{font-size:14px;color:#617896;font-weight:500;margin:17px 0 8px}
+#todos .todo-empty p{font-size:12px;line-height:1.9;margin:0}
+#todos .todo-right{display:grid;gap:22px;min-width:0}
+#todos .todo-someday{border:1px solid #dbe5f4;background:linear-gradient(110deg,#eaf1fc,#f6f8fe);border-radius:16px;padding:23px 25px 16px;box-shadow:0 6px 20px #29497104}
+#todos .todo-someday-heading{display:flex;align-items:center;justify-content:space-between}
+#todos .todo-someday .todo-eyebrow{font-size:9px;letter-spacing:2px;color:#7894bc}
+#todos .todo-someday h2{font-size:20px;color:#31568b;margin:5px 0 0;font-weight:650}
+#todos #todo-someday-count{font-size:11px;color:#7890b4}
+#todos .todo-someday-hint{font-size:11px;color:#8498b8;margin:8px 0 12px}
+#todos #todo-someday-list{max-height:270px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#bacce7 transparent}
+#todos .someday-row{padding:12px 0;border-color:#d9e3f1;gap:12px}
+#todos .someday-row:last-child{border-color:#d9e3f1}
+#todos .someday-row .todo-check{background:transparent;border-color:#a7bbd9}
+#todos .someday-row .todo-check[aria-checked=true]{background:#3975df;border-color:#3975df}
+#todos .someday-row .todo-name{font-size:14px;color:#3d577b;font-weight:450}
+#todos .todo-someday-empty{font-size:12px;color:#8b9fbd;margin:17px 0}
+#todos #todo-someday-form{display:flex;align-items:center;gap:9px;padding:13px 0 0;color:#7798c4;font-size:20px}
+#todos #todo-someday-input{flex:1;min-width:0;border:0;background:none;color:#375782;font:inherit;font-size:12px;padding:5px 0}
+#todos #todo-someday-add{font-size:11px;padding:7px 10px;border-radius:6px;color:#5276ac;background:#dfe8f7}
+#todos .todo-calendar{background:#fff;border:1px solid #dce3ee;border-radius:14px;overflow:hidden}
+#todos .todo-calendar-heading{display:flex;align-items:center;justify-content:space-between;padding:19px 20px;gap:12px;background:#f9fbfe}
+#todos .todo-calendar-heading h2{font-size:17px;font-weight:650;margin:0;letter-spacing:.2px}
+#todos .todo-calendar-heading>div{display:flex;align-items:center;gap:5px}
+#todos .todo-calendar-heading button{border:1px solid transparent;color:#637c9f;font-size:24px;padding:0 6px;min-width:29px;height:30px;border-radius:6px}
+#todos .todo-calendar-heading button:hover{background:#e9eff8}
+#todos #todo-month-now{font-size:11px;border-color:#dfe6f0;padding:0 10px;background:white}
+#todos .todo-calendar-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-block:1px solid var(--todo-line);background:#f8fafd}
+#todos .todo-calendar-week span{text-align:center;font-size:11px;color:#6e809c;padding:11px 0;border-right:1px solid var(--todo-line)}
+#todos .todo-calendar-week span:last-child{border-right:0}
+#todos #todo-calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+#todos .todo-calendar-day{min-width:0;min-height:105px;border-right:1px solid var(--todo-line);border-bottom:1px solid var(--todo-line);padding:5px 0 7px;background:white}
+#todos .todo-calendar-day:nth-child(7n){border-right:0}
+#todos .todo-calendar-day.outside{background:#fafbfd}
+#todos .todo-calendar-day.is-today{background:#f0f6ff}
+#todos .todo-calendar-day.is-selected{box-shadow:inset 0 0 0 1.5px #78a4ed;background:#edf4ff}
+#todos .todo-calendar-date{display:block;width:100%;text-align:left;padding:0 5px 5px;color:#526783;font-size:11px}
+#todos .todo-calendar-date span{display:grid;place-items:center;width:24px;height:24px;border-radius:50%}
+#todos .outside .todo-calendar-date{color:#b0bbcc}
+#todos .is-today .todo-calendar-date span{background:#3979e7;color:white;font-weight:650}
+#todos .todo-calendar-events{display:grid;gap:3px}
+#todos .todo-calendar-event{background:#e5efff;border-left:2px solid #6c9aef;padding:4px 4px;text-align:left;font-size:10px;line-height:1.45;color:#365d99;width:calc(100% - 4px);margin:0 2px;border-radius:3px;overflow:hidden}
+#todos .todo-calendar-event>span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+#todos .todo-calendar-event b{font-weight:650;font-variant-numeric:tabular-nums}
+#todos .todo-calendar-event.important{background:#dbe8fd;border-left-color:#3d76d7;color:#2c579c}
+#todos .todo-calendar-event:hover{background:#ccdffd;filter:none}
+#todos .todo-calendar-more{font-size:9px;color:#6d88b1;padding:4px 5px;text-align:left}
+#todos .todo-calendar-hint{padding:11px 17px;margin:0;font-size:10px;color:#8999af;background:#fbfcfe}
+#todos .todo-detail{width:510px;max-width:calc(100vw - 28px);max-height:90vh;overflow-y:auto;border:1px solid #dfe6f0;border-radius:18px;padding:25px;background:#fff;color:#314563;box-shadow:0 24px 90px #14274233}
+#todos .todo-detail::backdrop{background:#172b4955;backdrop-filter:blur(4px)}
+#todos .todo-detail-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+#todos .todo-detail-top h2{font-size:17px;margin:0;font-weight:600}
+#todos .todo-detail-top button{padding:0;font-size:26px;line-height:32px;width:32px;color:#8392a9}
+#todos .todo-field-label{display:block;font-size:11px;color:#8190a5;margin:0 0 8px}
+#todos #todo-edit-title{width:100%;border:1px solid #e1e7f0;background:#f9fbfe;border-radius:9px;padding:12px;font:inherit;font-size:16px;color:#314563;line-height:1.6;resize:vertical}
+#todos .todo-detail-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0 12px}
+#todos .todo-detail-fields>label{font-size:11px;color:#8190a5;display:flex;flex-direction:column;gap:8px}
+#todos .todo-detail-fields input[type=date],#todos .todo-detail-fields input[type=time],#todos .todo-detail-fields select{max-width:100%;min-width:0;border:1px solid #e1e7f0;background:#fff;border-radius:7px;padding:9px;color:#435e84;font-size:13px;height:37px}
+#todos .todo-done-control{display:flex;align-items:center;gap:7px;height:37px;color:#435e84}
+#todos .todo-done-control input{accent-color:#3975df}
+#todos .todo-unschedule{margin-bottom:20px}
+#todos .todo-unschedule button{font-size:11px;color:#6689bc;padding:0}
+#todos #todo-edit-note{font-size:13px;line-height:1.8;width:100%;border:1px solid #e1e7f0;border-radius:9px;padding:12px;color:#4c6383;resize:vertical}
+#todos .todo-detail-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid var(--todo-line)}
+#todos .todo-detail-actions .text-button{font-size:12px;color:#8394ad;padding:0}
+#todos .todo-detail-updated{font-size:10px;color:#98a5b7;text-align:right;margin:14px 0 0}
+#todos #todo-error,#todos #todo-edit-error{font-size:12px;color:#af536c;line-height:1.6}
+#todos #todo-error:empty,#todos #todo-edit-error:empty{display:none}
+#todos #todo-edit-refresh{font-size:12px;color:#3975df;padding:4px 0}
+#todos button:disabled{opacity:.5;cursor:wait}
+#todos :is(button,input,textarea,select):focus-visible{outline:2px solid #8db1ee;outline-offset:3px}
+@media(min-width:1700px){#todos .todo-workspace{grid-template-columns:minmax(460px,.8fr) minmax(620px,1.2fr);gap:30px}#todos .todo-main{padding:32px}#todos .todo-calendar-day{min-height:118px}#todos .todo-calendar-event{font-size:12px}#todos .todo-calendar-date{font-size:12px}}
+@media(max-width:1150px){body[data-view=todos] .content{padding:18px}#todos .todo-workspace{gap:16px;grid-template-columns:minmax(290px,.9fr) minmax(390px,1.1fr)}#todos .todo-main{padding:21px 18px}#todos .todo-filters{gap:1px}#todos .todo-filters button{padding:7px;font-size:11px}#todos .todo-row{gap:8px}#todos .todo-row-time{width:38px;font-size:11px}#todos .todo-name{font-size:13px}#todos .todo-someday{padding:20px}#todos .todo-calendar-heading{padding:17px 14px}}
+@media(max-width:900px){#todos .todo-workspace{grid-template-columns:1fr}#todos .todo-main{min-height:0}#todos .todo-right{grid-template-columns:1fr}#todos .todo-calendar-day{min-height:110px}#todos .todo-calendar-event{font-size:11px}#todos .todo-quick-options{gap:14px}#todos .todo-main-heading{margin-bottom:18px}#todos .todo-empty{padding:35px 12px}}
+@media(max-width:500px){body[data-view=todos] .content{padding:12px}#todos .todo-main{padding:21px 16px;border-radius:13px}#todos .todo-main-heading h2{font-size:23px}#todos .todo-list-total{font-size:10px;padding:6px 8px}#todos .todo-filters{gap:2px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}#todos .todo-filters button{padding:9px 7px;font-size:11px}#todos .todo-quick-title input,#todos .todo-search input,#todos #todo-someday-input{font-size:16px}#todos .todo-row{gap:9px;padding:17px 0}#todos .todo-name{font-size:14px}#todos .todo-note-preview{font-size:11px}#todos .todo-calendar-day{min-height:100px}#todos .todo-calendar-event{font-size:10px;padding:3px 2px}#todos .todo-calendar-event>span{-webkit-line-clamp:3}#todos .todo-calendar-heading h2{font-size:17px}#todos .todo-someday{padding:20px 18px 15px}#todos .todo-detail{padding:22px 19px}#todos .todo-detail-fields input[type=date],#todos .todo-detail-fields input[type=time],#todos .todo-detail-fields select{font-size:16px}#todos .todo-quick-options input[type=date],#todos .todo-quick-options input[type=time]{font-size:13px}#todos .todo-detail-actions .primary{min-height:42px}#todos .todo-list-caption{font-size:10px}}
+@media(prefers-reduced-motion:reduce){#todos *{scroll-behavior:auto!important;transition:none!important}}
+@media(min-width:901px) and (max-width:1100px){body:not(.nav-collapsed) #todos .todo-workspace{grid-template-columns:1fr}body:not(.nav-collapsed) #todos .todo-main{min-height:0}}

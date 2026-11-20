@@ -1,0 +1,73 @@
+/* Compact debt shelf: keep verified amounts visible, with complete records underneath. */
+#finance[data-finance-view="debts"] .fh-heading{margin:20px 0 22px}
+#finance[data-finance-view="debts"] .fh-heading .eyebrow{display:none}
+#finance[data-finance-view="debts"] .fh-heading h1{font-size:clamp(24px,2.5vw,32px);line-height:1.45;margin-bottom:8px}
+#finance[data-finance-view="debts"] .fh-heading p{font-size:13px;line-height:1.7}
+#fh-debts{min-width:0}
+#fh-debts .fh-debt-stats{display:grid;grid-template-columns:1.15fr 1.15fr 1fr .8fr;gap:0;border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:12px 0;margin:10px 0 0;box-shadow:none}
+#fh-debts .fh-debt-stats .fh-stat{display:flex;flex-direction:column;gap:4px;min-width:0;padding:0 20px;border:0;border-radius:0;background:none;box-shadow:none;color:var(--ink)}
+#fh-debts .fh-debt-stats .fh-stat+.fh-stat{border-left:1px solid var(--line)}
+#fh-debts .fh-debt-stats small{font-size:11px;line-height:1.4;color:var(--muted)}
+#fh-debts .fh-debt-stats strong{font-size:22px;line-height:1.25;margin:0;letter-spacing:-.5px;overflow-wrap:anywhere}
+#fh-debts .fh-debt-stats p{font-size:10px;line-height:1.5;margin:0;color:var(--muted)}
+#fh-debts .fh-debt-stats .fh-review-link{font-size:11px;min-height:0;padding:0;line-height:1.5}
+#fh-debts .fh-debt-method{font-size:10px;line-height:1.8;color:var(--muted);margin:7px 2px 20px}
+#fh-debts .fh-debt-method summary{cursor:pointer;width:max-content;max-width:100%}
+#fh-debts .fh-debt-method p{margin:6px 0;max-width:850px}
+#fh-debts .fh-debt-section-heading{margin:0 0 14px;align-items:center;gap:14px}
+#fh-debts .fh-debt-section-heading h2{font-size:22px;margin:0 0 4px;line-height:1.5}
+#fh-debts .fh-debt-section-heading h2 small{font-size:11px;font-weight:400;color:var(--muted);margin-left:8px}
+#fh-debts .fh-debt-section-heading p{font-size:11px;margin:0;line-height:1.6}
+#fh-debts .fh-debt-section-heading>.primary{font-size:12px;padding:11px 15px;white-space:nowrap}
+#fh-debts .fh-debt-strip{display:flex;flex-wrap:nowrap;align-items:flex-start;gap:14px;overflow-x:auto;overflow-y:hidden;max-width:100%;padding:2px 2px 15px;margin:0 0 18px;scroll-padding:2px;overscroll-behavior-x:contain}
+#fh-debts .fh-debt-strip:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+#fh-debts .fh-debt-card{flex:0 0 220px;width:220px;min-width:220px;max-width:220px;display:flex;flex-direction:column;gap:12px;padding:17px 16px 12px;border:1px solid var(--line);border-radius:15px;box-shadow:none;background:var(--paper);color:var(--ink)}
+#fh-debts .fh-debt-card-title>small{font-size:10px;line-height:1.4;color:var(--muted)}
+#fh-debts .fh-debt-card h3{font-size:15px;line-height:1.5;margin:6px 0 0;min-height:45px;overflow-wrap:anywhere}
+#fh-debts .fh-debt-balance>small{font-size:10px;line-height:1.6;color:var(--muted);display:block}
+#fh-debts .fh-debt-card .fh-value{font-size:23px;line-height:1.4;letter-spacing:-.6px;margin:3px 0 0;overflow-wrap:anywhere}
+#fh-debts .fh-debt-at-a-glance{font-size:10px;line-height:1.7;display:grid;gap:4px;color:var(--muted)}
+#fh-debts .fh-debt-at-a-glance>div{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}
+#fh-debts .fh-debt-at-a-glance strong{font-size:12px;color:var(--ink);font-weight:500;overflow-wrap:anywhere}
+#fh-debts .fh-debt-at-a-glance small{font-size:10px;line-height:1.6}
+#fh-debts .fh-debt-state{font-size:10px;color:var(--accent);line-height:1.5;min-height:15px}
+#fh-debts .fh-debt-state.pending{color:var(--muted)}
+#fh-debts .fh-debt-main-actions{display:flex;flex-direction:column;gap:6px;margin-top:0}
+#fh-debts .fh-debt-main-actions>button{width:100%;padding:9px 7px;font-size:11px;line-height:1.6;white-space:normal;min-height:34px;border-radius:8px;box-shadow:none;overflow-wrap:anywhere}
+#fh-debts .fh-debt-main-actions>[data-fh="debt-edit"]{background:none;border:0;color:var(--accent);padding:4px;min-height:26px}
+#fh-debts .fh-debt-details{border-top:1px solid var(--line);padding-top:9px;font-size:11px;line-height:1.7;margin-top:-3px;min-width:0}
+#fh-debts .fh-debt-details>summary{color:var(--muted);cursor:pointer;line-height:1.7}
+#fh-debts .fh-debt-details>.fh-detail{grid-template-columns:1fr;margin:12px 0;gap:3px}
+#fh-debts .fh-debt-details .fh-detail dt{font-size:10px;margin-top:5px;color:var(--muted)}
+#fh-debts .fh-debt-details .fh-detail dd{font-size:12px;text-align:left;overflow-wrap:anywhere}
+#fh-debts .fh-debt-details .fh-badge{font-size:10px;line-height:1.7;white-space:normal}
+#fh-debts .fh-debt-details .fh-actions{display:grid;grid-template-columns:1fr;gap:7px;margin:12px 0 5px}
+#fh-debts .fh-debt-details .fh-actions>button{font-size:11px;line-height:1.6;padding:8px;white-space:normal;min-width:0}
+#fh-debts .fh-debt-details .fh-statement{display:block}
+#fh-debts .fh-debt-details .fh-statement strong{font-size:12px}
+#fh-debts .fh-debt-details .fh-statement p{font-size:11px;line-height:1.7}
+#fh-debts .fh-debt-details .fh-source{font-size:10px;overflow-wrap:anywhere}
+#fh-debts .fh-debt-group{padding:16px 18px;border-radius:14px;margin:0 0 14px;background:var(--paper)}
+#fh-debts .fh-debt-group>summary{font-size:13px;line-height:1.8;cursor:pointer;color:var(--ink)}
+#fh-debts .fh-debt-group>summary>span{font-size:11px;color:var(--muted);margin-left:12px;overflow-wrap:anywhere}
+#fh-debts .fh-debt-group[open]>.fh-debt-strip{margin:14px 0 0}
+#fh-debts>.fh-panel{border-radius:14px;box-shadow:none}
+html body #fh-debts :is(.fh-value,.fh-debt-at-a-glance,.fh-debt-at-a-glance *,.fh-debt-stats strong){font-family:var(--font-body,"Microsoft YaHei",sans-serif)!important;font-variant-numeric:tabular-nums}
+html[data-theme="journal"] #fh-debts :is(.fh-debt-card,.fh-debt-stats){border-radius:9px 13px 8px 12px}
+
+@media(max-width:1050px){
+ #fh-debts .fh-debt-stats .fh-stat{padding:0 13px}
+ #fh-debts .fh-debt-stats strong{font-size:19px}
+}
+@media(max-width:720px){
+ #fh-debts .fh-debt-stats{grid-template-columns:1fr 1fr;padding:0;gap:0;border-radius:13px}
+ #fh-debts .fh-debt-stats .fh-stat{padding:12px 14px;gap:5px}
+ #fh-debts .fh-debt-stats .fh-stat:nth-child(3){border-left:0}
+ #fh-debts .fh-debt-stats .fh-stat:nth-child(n+3){border-top:1px solid var(--line)}
+ #fh-debts .fh-debt-stats strong{font-size:19px;letter-spacing:-.4px}
+ #fh-debts .fh-debt-section-heading{flex-wrap:wrap}
+ #fh-debts .fh-debt-section-heading h2{font-size:21px}
+ #fh-debts .fh-debt-strip{gap:12px}
+ #fh-debts .fh-debt-group{padding:13px}
+ #fh-debts .fh-debt-group>summary>span{display:block;margin-left:0}
+}

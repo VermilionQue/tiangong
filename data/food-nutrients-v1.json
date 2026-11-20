@@ -1,0 +1,797 @@
+{
+  "version": 1,
+  "source": {
+    "name": "USDA National Nutrient Database SR28 (2015)",
+    "url": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/dnload/sr28asc.zip",
+    "sha256": "8308fd1d224ef1e5331093748007180da01a7ac713cbac6a1f5bc2a03e1ee70a",
+    "basis": "每100g可食部；碳水=USDA总碳水减膳食纤维；原料生重，熟米饭除外",
+    "approximations": "家用单位重量及带骨食材可食比例为常见用量估算；不识别的食材不自动类推"
+  },
+  "foods": [
+    {
+      "ndb": "10005",
+      "description": "Pork, fresh, belly, raw",
+      "aliases": [
+        "五花肉"
+      ],
+      "group": "other",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0,
+        "protein": 9.34,
+        "fat": 53.01,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "10219",
+      "description": "Pork, fresh, ground, raw",
+      "aliases": [
+        "猪肉末",
+        "肉末"
+      ],
+      "group": "other",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0,
+        "protein": 16.88,
+        "fat": 21.19,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "10088",
+      "description": "Pork, fresh, spareribs, separable lean and fat, raw",
+      "aliases": [
+        "排骨"
+      ],
+      "group": "other",
+      "grams_per_unit": {},
+      "edible_fraction": 0.7,
+      "per100g": {
+        "carbs": 0,
+        "protein": 15.47,
+        "fat": 23.4,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "05062",
+      "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+      "aliases": [
+        "鸡胸肉"
+      ],
+      "group": "other",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0,
+        "protein": 22.5,
+        "fat": 2.62,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "05100",
+      "description": "Chicken, broilers or fryers, wing, meat and skin, raw",
+      "aliases": [
+        "鸡翅中"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "个": 50
+      },
+      "edible_fraction": 0.7,
+      "per100g": {
+        "carbs": 0,
+        "protein": 17.52,
+        "fat": 12.85,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "15003",
+      "description": "Fish, bass, fresh water, mixed species, raw",
+      "aliases": [
+        "鲈鱼"
+      ],
+      "group": "other",
+      "grams_per_unit": {},
+      "edible_fraction": 0.5,
+      "per100g": {
+        "carbs": 0,
+        "protein": 18.86,
+        "fat": 3.69,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "01123",
+      "description": "Egg, whole, raw, fresh",
+      "aliases": [
+        "鸡蛋"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "个": 50
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0.72,
+        "protein": 12.56,
+        "fat": 9.51,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "11529",
+      "description": "Tomatoes, red, ripe, raw, year round average",
+      "aliases": [
+        "番茄",
+        "西红柿"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {
+        "个": 180
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 2.69,
+        "protein": 0.88,
+        "fat": 0.2,
+        "fiber": 1.2
+      }
+    },
+    {
+      "ndb": "11090",
+      "description": "Broccoli, raw",
+      "aliases": [
+        "西兰花"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {
+        "颗": 350
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 4.04,
+        "protein": 2.82,
+        "fat": 0.37,
+        "fiber": 2.6
+      }
+    },
+    {
+      "ndb": "11352",
+      "description": "Potatoes, flesh and skin, raw",
+      "aliases": [
+        "土豆",
+        "马铃薯"
+      ],
+      "group": "tuber",
+      "grams_per_unit": {
+        "个": 180
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 15.39,
+        "protein": 2.05,
+        "fat": 0.09,
+        "fiber": 2.1
+      }
+    },
+    {
+      "ndb": "11052",
+      "description": "Beans, snap, green, raw",
+      "aliases": [
+        "四季豆",
+        "菜豆"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 4.27,
+        "protein": 1.83,
+        "fat": 0.22,
+        "fiber": 2.7
+      }
+    },
+    {
+      "ndb": "11333",
+      "description": "Peppers, sweet, green, raw",
+      "aliases": [
+        "青椒"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {
+        "个": 100
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 2.94,
+        "protein": 0.86,
+        "fat": 0.17,
+        "fiber": 1.7
+      }
+    },
+    {
+      "ndb": "11205",
+      "description": "Cucumber, with peel, raw",
+      "aliases": [
+        "黄瓜"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {
+        "根": 200
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 3.13,
+        "protein": 0.65,
+        "fat": 0.11,
+        "fiber": 0.5
+      }
+    },
+    {
+      "ndb": "11116",
+      "description": "Cabbage, chinese (pak-choi), raw",
+      "aliases": [
+        "小白菜",
+        "青菜",
+        "油菜"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 1.18,
+        "protein": 1.5,
+        "fat": 0.2,
+        "fiber": 1.0
+      }
+    },
+    {
+      "ndb": "11119",
+      "description": "Cabbage, chinese (pe-tsai), raw",
+      "aliases": [
+        "大白菜"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 2.03,
+        "protein": 1.2,
+        "fat": 0.2,
+        "fiber": 1.2
+      }
+    },
+    {
+      "ndb": "11457",
+      "description": "Spinach, raw",
+      "aliases": [
+        "菠菜"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 1.43,
+        "protein": 2.86,
+        "fat": 0.39,
+        "fiber": 2.2
+      }
+    },
+    {
+      "ndb": "11124",
+      "description": "Carrots, raw",
+      "aliases": [
+        "胡萝卜"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {
+        "根": 100
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 6.78,
+        "protein": 0.93,
+        "fat": 0.24,
+        "fiber": 2.8
+      }
+    },
+    {
+      "ndb": "11291",
+      "description": "Onions, spring or scallions (includes tops and bulb), raw",
+      "aliases": [
+        "葱",
+        "小葱",
+        "葱花"
+      ],
+      "group": "vegetable",
+      "grams_per_unit": {
+        "根": 10
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 4.74,
+        "protein": 1.83,
+        "fat": 0.19,
+        "fiber": 2.6
+      }
+    },
+    {
+      "ndb": "11216",
+      "description": "Ginger root, raw",
+      "aliases": [
+        "姜",
+        "生姜"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "片": 2
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 15.77,
+        "protein": 1.82,
+        "fat": 0.75,
+        "fiber": 2.0
+      }
+    },
+    {
+      "ndb": "11215",
+      "description": "Garlic, raw",
+      "aliases": [
+        "蒜",
+        "大蒜",
+        "蒜瓣"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "瓣": 3
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 30.96,
+        "protein": 6.36,
+        "fat": 0.5,
+        "fiber": 2.1
+      }
+    },
+    {
+      "ndb": "16127",
+      "description": "Tofu, soft, prepared with calcium sulfate and magnesium chloride (nigari)",
+      "aliases": [
+        "嫩豆腐"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "块": 300
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0.98,
+        "protein": 7.17,
+        "fat": 3.69,
+        "fiber": 0.2
+      }
+    },
+    {
+      "ndb": "16087",
+      "description": "Peanuts, all types, raw",
+      "aliases": [
+        "花生",
+        "花生米"
+      ],
+      "group": "other",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 7.63,
+        "protein": 25.8,
+        "fat": 49.24,
+        "fiber": 8.5
+      }
+    },
+    {
+      "ndb": "20444",
+      "description": "Rice, white, long-grain, regular, raw, unenriched",
+      "aliases": [
+        "大米",
+        "白米",
+        "生大米"
+      ],
+      "group": "refined",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 78.65,
+        "protein": 7.13,
+        "fat": 0.66,
+        "fiber": 1.3
+      }
+    },
+    {
+      "ndb": "20036",
+      "description": "Rice, brown, long-grain, raw",
+      "aliases": [
+        "糙米"
+      ],
+      "group": "whole",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 72.65,
+        "protein": 7.54,
+        "fat": 3.2,
+        "fiber": 3.6
+      }
+    },
+    {
+      "ndb": "20038",
+      "description": "Oats",
+      "aliases": [
+        "燕麦米",
+        "燕麦粒"
+      ],
+      "group": "whole",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 55.67,
+        "protein": 16.89,
+        "fat": 6.9,
+        "fiber": 10.6
+      }
+    },
+    {
+      "ndb": "08120",
+      "description": "Cereals, oats, regular and quick, not fortified, dry",
+      "aliases": [
+        "原味燕麦片",
+        "纯燕麦片"
+      ],
+      "group": "whole",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 57.6,
+        "protein": 13.15,
+        "fat": 6.52,
+        "fiber": 10.1
+      }
+    },
+    {
+      "ndb": "20031",
+      "description": "Millet, raw",
+      "aliases": [
+        "小米"
+      ],
+      "group": "whole",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 64.35,
+        "protein": 11.02,
+        "fat": 4.22,
+        "fiber": 8.5
+      }
+    },
+    {
+      "ndb": "20080",
+      "description": "Wheat flour, whole-grain",
+      "aliases": [
+        "全麦面粉"
+      ],
+      "group": "whole",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 61.27,
+        "protein": 13.21,
+        "fat": 2.5,
+        "fiber": 10.7
+      }
+    },
+    {
+      "ndb": "20081",
+      "description": "Wheat flour, white, all-purpose, enriched, bleached",
+      "aliases": [
+        "白面粉",
+        "小麦面粉",
+        "面粉"
+      ],
+      "group": "refined",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 73.61,
+        "protein": 10.33,
+        "fat": 0.98,
+        "fiber": 2.7
+      }
+    },
+    {
+      "ndb": "16032",
+      "description": "Beans, kidney, red, mature seeds, raw",
+      "aliases": [
+        "红芸豆"
+      ],
+      "group": "pulse",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 46.09,
+        "protein": 22.53,
+        "fat": 1.06,
+        "fiber": 15.2
+      }
+    },
+    {
+      "ndb": "16080",
+      "description": "Mung beans, mature seeds, raw",
+      "aliases": [
+        "绿豆"
+      ],
+      "group": "pulse",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 46.32,
+        "protein": 23.86,
+        "fat": 1.15,
+        "fiber": 16.3
+      }
+    },
+    {
+      "ndb": "11167",
+      "description": "Corn, sweet, yellow, raw",
+      "aliases": [
+        "鲜玉米粒"
+      ],
+      "group": "whole",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 16.7,
+        "protein": 3.27,
+        "fat": 1.35,
+        "fiber": 2.0
+      }
+    },
+    {
+      "ndb": "20045",
+      "description": "Rice, white, long-grain, regular, enriched, cooked",
+      "aliases": [
+        "熟米饭",
+        "白米饭"
+      ],
+      "group": "refined",
+      "grams_per_unit": {},
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 27.77,
+        "protein": 2.69,
+        "fat": 0.28,
+        "fiber": 0.4
+      }
+    },
+    {
+      "ndb": "01077",
+      "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+      "aliases": [
+        "全脂牛奶",
+        "牛奶"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "ml": 1.03
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 4.8,
+        "protein": 3.15,
+        "fat": 3.25,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "16123",
+      "description": "Soy sauce made from soy and wheat (shoyu)",
+      "aliases": [
+        "生抽",
+        "老抽",
+        "酱油"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "ml": 1.1,
+        "勺": 16.5
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 4.13,
+        "protein": 8.14,
+        "fat": 0.57,
+        "fiber": 0.8
+      }
+    },
+    {
+      "ndb": "06176",
+      "description": "Sauce, oyster, ready-to-serve",
+      "aliases": [
+        "蚝油"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "ml": 1.2,
+        "勺": 18
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 10.62,
+        "protein": 1.35,
+        "fat": 0.25,
+        "fiber": 0.3
+      }
+    },
+    {
+      "ndb": "02053",
+      "description": "Vinegar, distilled",
+      "aliases": [
+        "醋",
+        "白醋"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "ml": 1,
+        "勺": 15
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0.04,
+        "protein": 0.0,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "19335",
+      "description": "Sugars, granulated",
+      "aliases": [
+        "白糖",
+        "冰糖",
+        "白砂糖"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "勺": 12
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 99.98,
+        "protein": 0.0,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "04044",
+      "description": "Oil, soybean, salad or cooking",
+      "aliases": [
+        "食用油",
+        "大豆油"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "ml": 0.92,
+        "勺": 13.8
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0,
+        "protein": 0.0,
+        "fat": 100.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "04058",
+      "description": "Oil, sesame, salad or cooking",
+      "aliases": [
+        "芝麻油",
+        "香油"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "ml": 0.92,
+        "勺": 13.8
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0,
+        "protein": 0.0,
+        "fat": 100.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "14148",
+      "description": "Beverages, carbonated, cola, regular",
+      "aliases": [
+        "可乐"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "ml": 1.04
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 10.36,
+        "protein": 0.0,
+        "fat": 0.25,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "20027",
+      "description": "Cornstarch",
+      "aliases": [
+        "淀粉",
+        "玉米淀粉"
+      ],
+      "group": "refined",
+      "grams_per_unit": {
+        "勺": 8
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 90.37,
+        "protein": 0.26,
+        "fat": 0.05,
+        "fiber": 0.9
+      }
+    },
+    {
+      "ndb": "02047",
+      "description": "Salt, table",
+      "aliases": [
+        "盐",
+        "食盐"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "勺": 18
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0,
+        "protein": 0.0,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    },
+    {
+      "ndb": "14411",
+      "description": "Beverages, water, tap, drinking",
+      "aliases": [
+        "水",
+        "清水"
+      ],
+      "group": "other",
+      "grams_per_unit": {
+        "ml": 1
+      },
+      "edible_fraction": 1,
+      "per100g": {
+        "carbs": 0,
+        "protein": 0.0,
+        "fat": 0.0,
+        "fiber": 0.0
+      }
+    }
+  ]
+}

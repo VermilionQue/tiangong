@@ -1,0 +1,92 @@
+/* Body trends: three units, one time domain. */
+.body-trends {
+  --trend-paper: #fff;
+  --trend-border: #e4eaf3;
+  --trend-ink: #25344d;
+  --trend-muted: #75849b;
+  --trend-line: #567fcc;
+  --trend-grid: #e9edf4;
+  --trend-tooltip: #263a5b;
+  margin-top: 34px;
+  font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", sans-serif;
+  color: var(--trend-ink);
+  min-width: 0;
+}
+.body-trends-heading {display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}
+.body-trends-heading h2 {font:600 19px/1.5 "Microsoft YaHei","微软雅黑","PingFang SC",sans-serif;margin:0;letter-spacing:0}
+.body-trends-heading p {font-size:11px;line-height:1.8;color:var(--trend-muted);margin:5px 0 0}
+.body-trends-heading .body-trends-range {font-size:10px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.body-trend-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.body-trend-card {background:var(--trend-paper);border:1px solid var(--trend-border);border-radius:20px;min-width:0;padding:23px 18px 15px;box-shadow:0 3px 10px #294a7b03}
+.body-trend-card[data-trend="bodyFatPercent"] {--trend-line:#8977b8}
+.body-trend-card[data-trend="skeletalMuscleKg"] {--trend-line:#597a99}
+.body-trend-summary {padding:0 7px}
+.body-trend-card h3 {display:flex;justify-content:space-between;gap:12px;align-items:center;font:500 13px/1.6 "Microsoft YaHei","微软雅黑","PingFang SC",sans-serif;color:var(--trend-ink);margin:0}
+.body-trend-card h3>span {font-size:10px;color:var(--trend-muted);font-weight:400}
+.body-trend-latest {font-size:30px;line-height:1.4;font-weight:500;letter-spacing:-.5px;margin:12px 0 0;font-variant-numeric:tabular-nums;color:var(--trend-ink)}
+.body-trend-latest>small {font-size:11px;color:var(--trend-muted);margin-left:7px;font-weight:400;letter-spacing:0}
+.body-trend-latest-date {font-size:10px;color:var(--trend-muted);margin:4px 0 18px;font-variant-numeric:tabular-nums;line-height:1.5}
+.body-trend-plot {position:relative;width:100%;aspect-ratio:360/214;isolation:isolate}
+.body-trend-chart {display:block;width:100%;height:100%;overflow:visible}
+.body-trend-gridline {stroke:var(--trend-grid);stroke-width:1;vector-effect:non-scaling-stroke}
+.body-trend-axis {fill:var(--trend-muted);font:10px "Microsoft YaHei","微软雅黑","PingFang SC",sans-serif;font-variant-numeric:tabular-nums}
+.body-trend-line {fill:none;stroke:var(--trend-line);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.body-trend-hit {fill:transparent;stroke:none}
+.body-trend-point {cursor:pointer;outline:none}
+.body-trend-marker {fill:var(--trend-line);stroke:var(--trend-paper);stroke-width:2;vector-effect:non-scaling-stroke}
+.body-trend-point.is-self-reported .body-trend-marker {fill:var(--trend-paper);stroke:var(--trend-line);stroke-width:2.3}
+.body-trend-focus {fill:var(--trend-paper);stroke:var(--trend-line);stroke-width:1.4;opacity:0;vector-effect:non-scaling-stroke}
+.body-trend-point:focus-visible .body-trend-focus,.body-trend-point.is-active .body-trend-focus {opacity:1}
+.body-trend-tooltip {position:absolute;z-index:2;transform:translate(-50%,calc(-100% - 15px));max-width:85%;width:max-content;pointer-events:none;background:var(--trend-tooltip);color:#fff;border-radius:9px;padding:8px 11px;font-size:11px;line-height:1.7;box-shadow:0 5px 15px #1c324925;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.body-trend-tooltip[hidden] {display:none}
+.body-trend-empty {height:100%;display:flex;align-items:center;justify-content:center;color:var(--trend-muted);font-size:12px;border-block:1px dashed var(--trend-border)}
+.body-trend-count {font-size:10px;line-height:1.7;color:var(--trend-muted);margin:2px 7px 13px;min-height:17px}
+.body-trend-records {border-top:1px solid var(--trend-border);padding-top:12px}
+.body-trend-records>summary {font-size:11px;line-height:1.8;cursor:pointer;color:var(--trend-ink);padding:0 7px;width:fit-content}
+.body-trend-records>summary:focus-visible {outline:2px solid var(--trend-line);outline-offset:4px;border-radius:3px}
+.body-trend-records>summary>span {color:var(--trend-muted);margin-left:7px;font-size:10px}
+.body-trend-table-wrap {margin-top:12px;overflow-x:auto}
+.body-trend-records table {width:100%;border-collapse:collapse;font-size:10px;line-height:1.8;table-layout:auto;color:var(--trend-ink);white-space:normal;margin:0}
+.body-trend-records caption {text-align:left;position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.body-trend-records th,.body-trend-records td {padding:8px 7px;border-bottom:1px solid var(--trend-border);text-align:left;font-weight:400;font-size:inherit;color:inherit}
+.body-trend-records thead th {color:var(--trend-muted);background:transparent}
+.body-trend-records tbody th {white-space:nowrap;font-variant-numeric:tabular-nums}
+.body-trend-records tbody td:nth-child(2) {white-space:nowrap;font-variant-numeric:tabular-nums}
+.body-trend-records td:last-child {overflow-wrap:anywhere;min-width:40px}
+.body-trend-records th small {display:block;font-size:9px;color:var(--trend-muted)}
+.body-trends-legend {display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:var(--trend-muted);font-size:10px;margin-top:14px;line-height:1.8;padding:0 3px}
+.body-trends-legend>span {display:flex;align-items:center;gap:6px;white-space:nowrap}
+.body-trends-legend i {width:7px;height:7px;border-radius:50%;display:inline-block;background:var(--trend-line);border:1.5px solid var(--trend-line);box-sizing:border-box}
+.body-trends-legend i.is-self-reported {background:var(--trend-paper)}
+.body-trends-legend p {margin:0}
+html[data-theme="journal"] .body-trends {
+  --trend-paper:#fffdf7;
+  --trend-border:#e4dcc9;
+  --trend-ink:#49483f;
+  --trend-muted:#858578;
+  --trend-line:#7384aa;
+  --trend-grid:#ece6d7;
+  --trend-tooltip:#5d625c;
+}
+html[data-theme="journal"] .body-trends :is(.body-trend-axis,.body-trend-latest,.body-trend-latest *,.body-trend-latest-date,.body-trends-range,.body-trend-tooltip,.body-trend-records tbody *) {font-family:var(--font-body,"Microsoft YaHei","PingFang SC",sans-serif)!important}
+html[data-theme="journal"] .body-trend-card {border-radius:9px 13px 8px 12px;box-shadow:2px 3px 0 #bfb49c13}
+html[data-theme="journal"] .body-trend-card[data-trend="bodyFatPercent"] {--trend-line:#9785a6}
+html[data-theme="journal"] .body-trend-card[data-trend="skeletalMuscleKg"] {--trend-line:#7c8e99}
+@media(max-width:1100px) {
+  .body-trend-grid {gap:12px}
+  .body-trend-card {padding:19px 10px 14px}
+}
+@media(max-width:800px) {
+  .body-trend-grid {grid-template-columns:minmax(0,1fr);gap:16px}
+  .body-trend-card {padding:23px 20px 17px}
+  .body-trends-heading {align-items:flex-start;flex-direction:column;gap:4px}
+  .body-trends-heading .body-trends-range {font-size:11px}
+  .body-trend-plot {max-width:550px;margin-inline:auto}
+  .body-trend-card h3 {font-size:14px}
+  .body-trend-records table,.body-trend-records>summary {font-size:12px}
+  .body-trend-latest-date,.body-trend-count,.body-trends-legend {font-size:11px}
+}
+@media(prefers-contrast:more) {
+  .body-trends {--trend-muted:#4d5f78;--trend-grid:#b3bfd0;--trend-border:#8e9eb7}
+  html[data-theme="journal"] .body-trends {--trend-muted:#5b5c50;--trend-grid:#bab3a2;--trend-border:#aaa18b}
+}

@@ -1,0 +1,115 @@
+/* V44: aligned daily space and compact, legible information cards. */
+#today{--t44-heading:20px;--t44-body:14px;--t44-small:12px}
+#today .t40-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(330px,1fr);grid-template-rows:auto auto auto;gap:24px;align-items:stretch}
+#today :is(.t40-main,.t40-side){display:contents}
+#today .t40-welcome{grid-area:1/1;min-height:235px}
+#today .t40-weather{grid-area:1/2}
+#today .t40-agenda{grid-area:2/1;min-height:340px;display:flex;flex-direction:column}
+#today .t40-finance{grid-area:2/2}
+#today .t40-quick-note{grid-area:3/1;min-height:410px;display:flex;flex-direction:column}
+#today .t44-exercise{grid-area:3/2;min-width:0}
+html[data-theme] #today :is(h2,.t40-section-head h2,.t40-welcome-copy h2){font-family:var(--font-heading,var(--t40-body));font-size:var(--t44-heading);font-weight:700;line-height:1.5;letter-spacing:0;margin:0}
+html[data-theme] #today :is(.t40-section-head p,.t40-welcome-copy p,.t40-task-copy,.t40-latest-text,.t40-weather-rain,#t40-note-input,.t40-link,#to-todos,.primary){font-size:var(--t44-body);line-height:1.7}
+html[data-theme] #today :is(.t40-status,.t40-note-time,.t40-finance-note,.t40-spending-label,.t40-weather-source,.t40-budget-line,.t40-weather-detail){font-size:var(--t44-small);line-height:1.7}
+#today .t40-tasks{max-height:230px;min-height:0;overflow:auto;overscroll-behavior:contain}
+#today .t40-task-copy small{white-space:pre-wrap;display:block;-webkit-line-clamp:unset;max-height:none;font-size:12px}
+#today #t40-note-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start}
+#today #t40-note-input{height:46px;min-height:46px;max-height:140px;resize:vertical;padding:10px 12px;border-radius:12px}
+#today #t40-note-save{height:46px;margin:0;padding:8px 18px;white-space:nowrap}
+#today #t40-note-status{grid-column:1/-1;margin:0}
+#today .t44-recent-notes{margin-top:12px;max-height:300px;overflow:auto;overscroll-behavior:contain}
+#today .t44-recent-note{padding:14px 0;border-top:1px solid var(--line)}
+#today .t40-note-time{margin:0}
+#today .t40-latest-text{max-height:none;overflow:visible;margin:6px 0;line-height:1.8}
+#today .t40-finance{background:#272520;color:#fff9ef;border:1px solid #b47d48;box-shadow:inset 0 0 0 3px #f0bd6f08}
+html[data-theme] #today .t40-finance h2{color:#fff9ef}
+#today .t40-finance :is(.t40-link,#t40-money-toggle){color:#ffc579}
+#today .t40-finance .t40-section-head{padding-bottom:18px;border-bottom:1px solid #ffffff24}
+#today .t40-finance :is(.t40-spending-label,.t40-budget-line,.t40-finance-note){color:#d0c7bc}
+#today .t40-spending{font-size:clamp(32px,3vw,48px);color:#ffab5d;font-weight:750;margin:12px 0 20px}
+#today .t40-budget-bar{height:12px;background:#443b33;box-shadow:none}
+#today .t40-budget-bar.is-low{background:#583334;box-shadow:none}
+#today .t40-budget-bar span{background:#51ba88}
+#today .t40-budget-bar.is-low span{background:#e46b71}
+#today .t44-exercise-summary{display:flex;gap:14px;align-items:baseline;margin:15px 0}
+#today .t44-exercise-summary strong{font-size:32px;color:var(--accent)}
+#today .t44-exercise-summary small{font-size:14px;font-weight:400}
+#today .t44-exercise-summary>span{font-size:12px;color:var(--muted)}
+.t44-heat-week,.t44-heat-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.t44-heat-week{font-size:12px;text-align:center;color:var(--muted);margin-bottom:8px}
+#today .t44-heat-cell{border:1px solid color-mix(in srgb,var(--accent) 12%,transparent);min-height:30px;border-radius:7px;padding:6px 0;font-size:11px;color:var(--ink);font-weight:500}
+#today .t44-heat-cell.is-future{opacity:.35;cursor:default}
+#today .level-0{background:color-mix(in srgb,var(--accent) 6%,var(--paper))}
+#today .level-1{background:color-mix(in srgb,var(--accent) 23%,var(--paper))}
+#today .level-2{background:color-mix(in srgb,var(--accent) 43%,var(--paper))}
+#today .level-3{background:color-mix(in srgb,var(--accent) 72%,var(--paper));color:white}
+#today .level-4{background:var(--accent);color:white}
+.t44-heat-legend{display:flex;justify-content:flex-end;gap:5px;align-items:center;margin:12px 0;font-size:11px;color:var(--muted)}
+.t44-heat-legend i{width:12px;height:12px;border-radius:3px}
+#finance .metrics.fh-daily-metrics{grid-template-columns:1fr}
+#finance .fh-month-spending{min-height:130px;padding:22px 28px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px 20px}
+#finance .fh-month-spending .metric-value{grid-column:2;grid-row:1/3;margin:0;font-size:38px}
+#finance .fh-overview-budget{padding:0;background:transparent;border:0}
+#finance .fh-overview-budget-heading{margin:10px 0 14px}
+#finance :is(.t44-budget-grid,.fh-budget-grid){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+#finance .t44-budget-card{min-width:0;background:#272520;color:#fff7ed;border:1px solid #b47d48;border-radius:20px;padding:22px;box-shadow:none;overflow:hidden}
+#finance .t44-budget-card header{display:flex;align-items:center;gap:10px;background:none;border:0;border-bottom:1px solid #ffffff24;padding:0 0 16px;position:static;min-height:0;box-shadow:none;height:auto}
+#finance .t44-budget-card h3{margin:0;font-size:18px;color:inherit;white-space:nowrap}
+#finance .t44-budget-card .fh-budget-details-link{color:inherit;font:inherit;padding:0}
+.t44-budget-icon{display:grid;place-items:center;flex-shrink:0;width:34px;height:34px;border:1px solid #8e7354;border-radius:11px;color:#ffc579;background:#1c1a17;font-size:15px}
+.t44-budget-limit{margin-left:auto;font-size:15px;font-weight:700;color:#ffab5d;white-space:nowrap}
+.t44-budget-limit small{font-size:11px;color:#ddd0bf;font-weight:400}
+.t44-budget-balance{display:flex;flex-direction:column;gap:8px;margin:22px 0 16px}
+.t44-budget-balance small{font-size:13px;color:#d0c7bc}
+.t44-budget-balance strong{font-size:clamp(26px,2.5vw,38px);line-height:1.2;color:#ffab5d;letter-spacing:-.5px;font-weight:750}
+#finance .t44-budget-card .fh-healthbar{height:11px;border:0;border-radius:20px;background:#443b33;box-shadow:none;margin:0;overflow:hidden}
+#finance .t44-budget-card .fh-healthbar span{background:#51ba88;border-radius:20px}
+#finance .t44-budget-card .fh-healthbar.low{background:#583334}
+#finance .t44-budget-card .fh-healthbar.low span{background:#e46b71}
+#finance .t44-budget-card footer{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0;margin:12px 0 0;background:none;font-size:11px;color:#d0c7bc}
+#finance .t44-budget-card .fh-button{border:0;background:transparent;color:#ffc579;padding:4px;font-size:12px;white-space:nowrap}
+#finance .t44-budget-card.is-low .t44-budget-balance strong{color:#ff8e83}
+#finance .t44-debt-dashboard{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;margin-bottom:22px}
+.t44-debt-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px}
+.t44-debt-heading h2{font-size:20px;margin:0}
+.t44-debt-heading span{color:var(--muted);font-size:12px}
+.t44-debt-numbers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.t44-debt-number small{display:block;font-size:12px;color:var(--muted)}
+.t44-debt-number strong{display:block;font-size:24px;margin-top:7px;color:var(--ink);overflow-wrap:anywhere}
+.t44-debt-number:first-child strong{color:var(--accent)}
+.t44-debt-forecast{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.t44-debt-month{background:color-mix(in srgb,var(--accent) 7%,var(--paper));border:1px solid var(--line);border-radius:16px;padding:18px}
+.t44-debt-month h3{font-size:14px;margin:0 0 8px}
+.t44-debt-month strong{font-size:26px;color:var(--ink)}
+.t44-debt-month p,.t44-debt-month summary{font-size:12px;line-height:1.8;color:var(--muted);margin:8px 0 0}
+.t44-debt-month ul{list-style:none;padding:0;margin:8px 0;max-height:180px;overflow:auto}
+.t44-debt-month li{font-size:12px;display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--line)}
+.t44-rate-groups{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}
+.t44-rate-group{border-left:4px solid var(--accent);border-radius:12px;background:var(--paper);padding:14px}
+.t44-rate-group.high{border-color:#cb5162}.t44-rate-group.mid{border-color:#bc852a}.t44-rate-group.low{border-color:#4e9c7e}.t44-rate-group.unknown{border-color:#8391a3}
+.t44-rate-group h3{font-size:14px;margin:0 0 6px}.t44-rate-group p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+.t44-rate-group details{margin-top:10px;font-size:12px;color:var(--ink)}
+#people .people-delete-card{display:block;width:calc(100% - 36px);margin:0 18px 15px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:transparent;color:#aa5360;text-align:center;font-size:13px}
+#people .people-delete-card:hover{background:#fff0f0}
+@media(min-width:1101px){
+ html[data-theme] #todos .todo-workspace{height:clamp(820px,calc(100dvh - 150px),1100px);align-items:stretch}
+ html[data-theme] #todos .todo-calendar{height:100%;min-height:0;display:flex;flex-direction:column}
+ html[data-theme] #todos #todo-calendar-scroll{flex:1;min-height:0;max-height:none;height:auto}
+ html[data-theme] #todos .todo-right{height:100%;min-height:0;grid-template-rows:minmax(210px,.34fr) minmax(0,1fr);gap:20px}
+ html[data-theme] #todos .todo-someday{min-height:0;display:flex;flex-direction:column;overflow:hidden}
+ html[data-theme] #todos #todo-someday-list{flex:1;min-height:0;max-height:none;overflow:auto}
+ html[data-theme] #todos .todo-main{display:flex;flex-direction:column;min-height:0;height:100%;overflow:hidden}
+ html[data-theme] #todos .todo-main> :not(#todo-list){flex-shrink:0}
+ html[data-theme] #todos #todo-list{flex:1;min-height:0;max-height:none;overflow:auto}
+}
+html[data-theme] #todos :is(.todo-main-heading h2,.todo-someday-heading h2){font-family:inherit;font-size:20px;line-height:1.5;font-weight:700}
+html[data-theme] #todos .todo-row{border:1px solid var(--todo-line,var(--line));border-radius:13px;background:var(--paper);padding:14px 10px;margin-bottom:9px;align-items:start;min-width:0}
+html[data-theme] #todos :is(.todo-name,.todo-note-preview){white-space:pre-wrap;overflow:visible;text-overflow:clip;display:block;-webkit-line-clamp:unset;max-height:none;overflow-wrap:anywhere;line-height:1.7}
+html[data-theme] #todos .todo-name{font-size:14px;font-weight:650}
+html[data-theme] #todos .todo-note-preview{font-size:12px;margin-top:7px}
+html[data-theme] #todos #todo-someday-toggle{display:none}
+html[data-theme] #todos #todo-someday-list{overflow:auto;overscroll-behavior:contain}
+@media(max-width:1100px){#today .t40-layout{grid-template-columns:minmax(0,1.3fr) minmax(300px,1fr);gap:18px}#finance :is(.t44-budget-grid,.fh-budget-grid){grid-template-columns:1fr;gap:14px}#finance .t44-budget-card{padding:20px}.t44-budget-balance strong{font-size:32px}.t44-rate-groups{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){#today .t40-layout{display:flex;flex-direction:column;gap:16px}#today .t40-welcome{order:0}#today .t40-weather{order:1}#today .t40-agenda{order:2}#today .t40-finance{order:3}#today .t40-quick-note{order:4}#today .t44-exercise{order:5}#today :is(.t40-welcome,.t40-agenda,.t40-quick-note){min-height:0}#today .t40-surface{padding:20px}#today{--t44-heading:18px;--t44-body:14px}#today #t40-note-save{padding:8px 12px}.t44-debt-numbers{grid-template-columns:1fr 1fr;gap:18px}.t44-debt-number strong{font-size:20px}.t44-debt-forecast{grid-template-columns:1fr}.t44-rate-groups{grid-template-columns:1fr 1fr}#finance .fh-month-spending{display:block;min-height:0}#finance .fh-month-spending .metric-value{font-size:34px;margin:12px 0}#finance .t44-debt-dashboard{padding:20px}}
+
+#today #t40-note-input{white-space:pre;resize:none;overflow-x:auto}

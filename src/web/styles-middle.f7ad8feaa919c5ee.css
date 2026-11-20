@@ -1,0 +1,57 @@
+/* wellness-v20.css */
+/* Body assessments: four readable measurements, with supporting originals. */
+.report-card-v20{align-items:stretch;padding:26px 28px}
+.report-card-content{width:100%;min-width:0}
+.report-card-v20 .report-meta{display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px}
+.report-card-v20 .report-meta>span{font-size:11px;color:#8592a5;line-height:1.6}
+.report-card-v20 .report-meta .report-source{margin-left:auto;color:#6d7f98}
+.report-card-v20 h3{font-size:17px;margin:10px 0 22px;color:#293b55;letter-spacing:-.3px}
+.report-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0}
+.report-metric{min-width:0}
+.report-metric dt{font-size:11px;color:#8190a4;margin-bottom:8px;line-height:1.6}
+.report-metric dd{font-size:27px;line-height:1.3;font-weight:600;letter-spacing:-.6px;color:#304867;margin:0;font-variant-numeric:tabular-nums}
+.report-metric dd small{font-size:12px;color:#8d9bb0;font-weight:400;letter-spacing:0}
+.report-more{margin-top:22px;border-top:1px solid #edf0f5;padding-top:14px}
+.report-more summary{font-size:11px;color:#637c9e;cursor:pointer;width:fit-content;line-height:1.8}
+.report-more summary span{color:#a0acbd;margin-left:8px;font-size:10px}
+.report-metrics-extra{margin-top:18px;gap:18px 20px}
+.report-metrics-extra dd{font-size:20px}
+.report-card-v20 .report-note{margin:16px 0 0;color:#8491a5;font-size:11px;line-height:1.8}
+.report-originals{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.report-card-v20 .report-original-link{display:flex;flex-direction:column;gap:3px;padding:10px 14px;border:1px solid #e6ecf4;border-radius:11px;background:#f8fafd;max-width:100%;min-width:110px;text-decoration:none;white-space:normal}
+.report-card-v20 .report-original-link:hover{background:#edf3fb;border-color:#cedcf0}
+.report-card-v20 .report-original-link>span{font-size:11px;color:#587cae;font-weight:600}
+.report-original-link small{font-size:9px;color:#94a3b7;overflow-wrap:anywhere}
+#exercise-detail .report-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#exercise-detail .report-card-v20{padding:22px}
+#report-file{max-width:100%}
+@media(max-width:700px){.report-card-v20{padding:22px 20px}.report-card-v20 .report-meta .report-source{margin-left:0}.report-card-v20 h3{font-size:16px;margin-bottom:20px}.report-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}.report-metric dd{font-size:26px}.report-metrics-extra dd{font-size:20px}.report-originals{gap:8px}.report-card-v20 .report-original-link{flex:1;margin:0;min-width:0}.report-original-link small{font-size:9px}.report-more{margin-top:20px}}
+
+/* notes-v15.css */
+/* Note actions and linked topics; the shared theme controls page colors. */
+.note-actions{position:relative;flex-shrink:0}
+.note-actions>summary{display:grid;place-items:center;list-style:none;width:34px;height:30px;cursor:pointer;border-radius:8px;color:#6d7890;font-size:23px;line-height:1;letter-spacing:1px}
+.note-actions>summary::-webkit-details-marker{display:none}
+.note-actions>summary:hover,.note-actions[open]>summary{background:#eef2fa;color:#334e7d}
+.note-actions>summary:focus-visible,.note-inline-tag:focus-visible{outline:2px solid #547be2;outline-offset:3px}
+.note-action-menu{position:absolute;right:0;top:35px;z-index:8;min-width:134px;padding:6px;background:#fff;border:1px solid #dfe5ef;border-radius:10px;box-shadow:0 10px 30px #14244024}
+.note-card-top .note-action-menu button{display:block;width:100%;padding:10px 12px;text-align:left;font-size:12px;color:#34445d;opacity:1;border-radius:6px}
+.note-action-menu button:hover{background:#f1f4fa}
+.note-card-top .note-action-menu .note-delete{color:#b44b5b}
+.note-card-top .note-restore{opacity:1;font-size:12px;padding:7px 10px;border-radius:7px;background:#edf2ff;color:#365cb2}
+.note-content a.note-inline-tag{color:#4979c4;text-decoration:none;cursor:pointer;border-radius:3px}
+.note-content a.note-inline-tag:hover{text-decoration:underline;background:#edf3ff}
+.notes-filter-summary{margin:20px 2px 12px;font-size:12px;color:#7c899c}
+.note-deleted-date{margin:16px 0 0;font-size:11px;color:#8c96a8}
+#notes-trash{margin-top:18px}
+#note-delete-dialog{width:min(440px,calc(100vw - 32px));padding:28px;border:1px solid #dfe5ef;border-radius:18px;box-shadow:0 20px 65px #11244b40;color:#29364c}
+#note-delete-dialog::backdrop{background:#17233b66}
+#note-delete-dialog h2{font-size:20px;margin:0 0 12px}
+#note-delete-dialog p{font-size:13px;line-height:1.7;color:#788398}
+#note-delete-preview{margin:18px 0;padding:13px 15px;background:#f2f5fa;border-left:3px solid #9aafd9;font-size:13px;line-height:1.7;color:#627088;overflow-wrap:anywhere;max-height:140px;overflow:auto}
+#note-delete-dialog #note-delete-error{color:#b44b5b}
+.note-dialog-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:22px}
+.note-dialog-actions button{border-radius:9px;padding:10px 16px;background:#edf1f7;color:#5b6981}
+.note-dialog-actions .note-delete-confirm{background:#ae4555;color:#fff}
+.note-dialog-actions button:disabled{opacity:.5;cursor:wait}
+@media(max-width:700px){#notes-trash{margin-top:0}.note-actions>summary{width:38px;height:36px}.note-card-top .note-action-menu button{padding:13px}.notes-filter-summary{margin-top:17px}#note-delete-dialog{padding:23px}}

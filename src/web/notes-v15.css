@@ -1,0 +1,27 @@
+/* Note actions and linked topics; the shared theme controls page colors. */
+.note-actions{position:relative;flex-shrink:0}
+.note-actions>summary{display:grid;place-items:center;list-style:none;width:34px;height:30px;cursor:pointer;border-radius:8px;color:#6d7890;font-size:23px;line-height:1;letter-spacing:1px}
+.note-actions>summary::-webkit-details-marker{display:none}
+.note-actions>summary:hover,.note-actions[open]>summary{background:#eef2fa;color:#334e7d}
+.note-actions>summary:focus-visible,.note-inline-tag:focus-visible{outline:2px solid #547be2;outline-offset:3px}
+.note-action-menu{position:absolute;right:0;top:35px;z-index:8;min-width:134px;padding:6px;background:#fff;border:1px solid #dfe5ef;border-radius:10px;box-shadow:0 10px 30px #14244024}
+.note-card-top .note-action-menu button{display:block;width:100%;padding:10px 12px;text-align:left;font-size:12px;color:#34445d;opacity:1;border-radius:6px}
+.note-action-menu button:hover{background:#f1f4fa}
+.note-card-top .note-action-menu .note-delete{color:#b44b5b}
+.note-card-top .note-restore{opacity:1;font-size:12px;padding:7px 10px;border-radius:7px;background:#edf2ff;color:#365cb2}
+.note-content a.note-inline-tag{color:#4979c4;text-decoration:none;cursor:pointer;border-radius:3px}
+.note-content a.note-inline-tag:hover{text-decoration:underline;background:#edf3ff}
+.notes-filter-summary{margin:20px 2px 12px;font-size:12px;color:#7c899c}
+.note-deleted-date{margin:16px 0 0;font-size:11px;color:#8c96a8}
+#notes-trash{margin-top:18px}
+#note-delete-dialog{width:min(440px,calc(100vw - 32px));padding:28px;border:1px solid #dfe5ef;border-radius:18px;box-shadow:0 20px 65px #11244b40;color:#29364c}
+#note-delete-dialog::backdrop{background:#17233b66}
+#note-delete-dialog h2{font-size:20px;margin:0 0 12px}
+#note-delete-dialog p{font-size:13px;line-height:1.7;color:#788398}
+#note-delete-preview{margin:18px 0;padding:13px 15px;background:#f2f5fa;border-left:3px solid #9aafd9;font-size:13px;line-height:1.7;color:#627088;overflow-wrap:anywhere;max-height:140px;overflow:auto}
+#note-delete-dialog #note-delete-error{color:#b44b5b}
+.note-dialog-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:22px}
+.note-dialog-actions button{border-radius:9px;padding:10px 16px;background:#edf1f7;color:#5b6981}
+.note-dialog-actions .note-delete-confirm{background:#ae4555;color:#fff}
+.note-dialog-actions button:disabled{opacity:.5;cursor:wait}
+@media(max-width:700px){#notes-trash{margin-top:0}.note-actions>summary{width:38px;height:36px}.note-card-top .note-action-menu button{padding:13px}.notes-filter-summary{margin-top:17px}#note-delete-dialog{padding:23px}}

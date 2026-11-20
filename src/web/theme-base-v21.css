@@ -1,0 +1,59 @@
+/* Shared behavior and layout for both skins. */
+#todos,#notes{scroll-margin-top:110px}
+#todos .todo-workspace{grid-template-columns:minmax(0,7fr) minmax(290px,3fr);gap:24px}
+#todos .todo-right{display:grid;gap:24px;min-width:0}
+#todos .todo-main{min-height:0;padding:20px}
+#todos .todo-main-heading{gap:8px;margin-bottom:16px}
+#todos .todo-main-heading h2{font-size:23px;margin:0}
+#todos .todo-main-heading .todo-eyebrow,#todos .todo-someday .todo-eyebrow,#todos .todo-someday-hint{display:none}
+#todos .todo-calendar-heading .todo-calendar-title{display:block;min-width:0}
+#todos .todo-calendar-heading small{display:block;font-size:11px;color:#8290a6;margin-top:8px;line-height:1.6}
+#todos .todo-calendar-scroll{height:clamp(460px,calc(100dvh - 290px),820px);overflow-y:auto;overscroll-behavior-y:contain;scrollbar-width:thin}
+#todos #todo-calendar-grid{display:block}
+#todos .todo-calendar-week-row{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));position:relative}
+#todos .todo-calendar-day{position:relative;min-height:124px}
+#todos .is-current-week .todo-calendar-day{min-height:158px;background:#f5f8fe;border-block-color:#afc8ee}
+#todos .is-current-week{outline:1px solid #b7ceee;outline-offset:-1px}
+#todos .todo-calendar-day.is-today{background:#e6f0ff;box-shadow:inset 0 0 0 2px #86ace6}
+#todos .todo-calendar-date{display:flex;align-items:center;gap:3px;min-height:35px}
+#todos .todo-calendar-date .todo-calendar-today-label,#todos .todo-calendar-date .todo-calendar-month-label{width:auto;height:auto;background:none;color:#5f7fae;font-size:10px;font-weight:400}
+#todos #todo-someday-list{max-height:none;overflow:visible}
+#todos .todo-someday{padding:20px}
+#todos .todo-someday h2{margin:0 0 7px}
+#todos .someday-row{padding:9px 0}
+#todos .someday-row .todo-name{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+#todos .someday-row .todo-row-actions{display:none}
+#todos .todo-someday-toggle{display:block;width:100%;line-height:24px;color:#6f88ad;letter-spacing:4px;font-size:22px}
+#todos .todo-someday-toggle[hidden]{display:none}
+#todos .todo-filters{gap:3px}
+#todos .todo-filters button{padding:7px 6px;font-size:11px}
+#todos .todo-quick-options{gap:7px;padding:9px}
+#todos .todo-quick-options input[type=date]{width:104px}
+#todos .todo-quick-options input[type=time]{width:74px}
+#todos .todo-name{font-size:13px}
+#todos .todo-row-time{width:35px;font-size:11px}
+#notes .note-composer{position:relative;z-index:2;overflow:visible}
+#notes .note-composer-bottom>div{gap:6px;min-width:0}
+#notes .note-composer-bottom button:not(.primary){display:grid;place-items:center;width:29px;height:29px;flex:none}
+#notes .note-composer-bottom button svg{width:18px;height:18px}
+#notes .note-composer-bottom #note-cancel{width:auto}
+#notes .note-actions{width:32px;flex:0 0 32px;margin-left:auto}
+#notes .note-actions>summary{position:relative;width:32px;height:30px;padding:0;font-size:0;line-height:0;letter-spacing:0;overflow:hidden}
+#notes .note-actions>summary::before{content:'';width:3px;height:3px;border-radius:50%;background:currentColor;box-shadow:-7px 0 0 currentColor,7px 0 0 currentColor;position:absolute;top:13px;left:14px}
+#notes #note-tag-picker{position:absolute;left:16px;right:16px;top:calc(100% - 3px);z-index:30;max-height:240px;overflow-y:auto;background:white;border:1px solid #cbd6e7;border-radius:10px;padding:8px;box-shadow:0 12px 24px #233b5e1c}
+#notes #note-tag-picker[hidden]{display:none}
+#notes .note-tag-option{display:block;text-align:left;width:100%;padding:10px 12px;font-size:13px;color:#4b6081;border-radius:6px}
+#notes .note-tag-option.selected,#notes .note-tag-option:hover{background:#eaf0ff}
+#notes .note-tag-empty{padding:12px;color:#8a96a9;font-size:12px}
+#notes .note-draft-assets{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+#notes .note-draft-assets:empty{display:none}
+#notes .note-draft-asset{position:relative;display:flex;flex-direction:column;gap:5px;width:100px;padding:5px;border:1px solid #d4dfef;background:#f7f9fe;border-radius:9px}
+#notes .note-draft-asset img{width:88px;height:70px;object-fit:cover;border-radius:6px}
+#notes .note-draft-asset>span{font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#7184a0}
+#notes .note-draft-remove{position:absolute;right:-5px;top:-5px;width:22px;height:22px;padding:0;display:grid;place-items:center;border:1px solid #c2cee1;border-radius:50%;background:white;color:#6b7f9e;font-size:16px}
+#notes #note-form.is-dragover{border:2px dashed #739bdd;background:#eef4ff}
+#notes #note-form.is-dragover::after{content:'松开，添加图片';position:absolute;inset:8px;z-index:20;display:grid;place-items:center;background:#eef4ffdf;color:#567fbd;pointer-events:none;border-radius:10px}
+#notes .note-drop-hint{font-size:11px;color:#7f8fa8}
+@media(max-width:1200px){#todos .todo-workspace{gap:18px}#todos .todo-main{padding:17px 15px}}
+@media(max-width:1000px){#todos .todo-workspace,body:not(.nav-collapsed) #todos .todo-workspace{grid-template-columns:1fr}#todos .todo-right{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}#todos .todo-calendar-scroll{height:530px}}
+@media(max-width:600px){#todos .todo-right{grid-template-columns:1fr}#todos .todo-calendar-scroll{height:480px}#todos .todo-calendar-day{min-height:107px}#todos .is-current-week .todo-calendar-day{min-height:143px}#todos .todo-calendar-date{flex-wrap:wrap;align-content:start;height:39px}#todos .todo-filters{flex-wrap:wrap;overflow:visible}#notes .note-composer-bottom{gap:5px}#notes .note-composer-bottom>div{gap:3px}#notes .note-composer-bottom button:not(.primary){width:27px;height:31px}#notes .note-composer-bottom .primary{padding:7px 14px}#notes .note-draft-asset{width:90px}#notes .note-draft-asset img{width:78px;height:65px}}

@@ -1,0 +1,16 @@
+#todos .todo-sync{margin-top:22px;padding-top:16px;border-top:1px solid var(--todo-line);font-size:11px;color:var(--todo-muted)}
+#todos .todo-sync-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600;color:var(--todo-ink)}
+#todos #todo-sync-now{border:1px solid var(--todo-line);border-radius:7px;padding:5px 12px;color:var(--todo-blue);font-size:11px}
+#todos #todo-sync-now:disabled{opacity:.5;cursor:wait}
+#todos #todo-sync-status{line-height:1.7;margin:8px 0}
+#todos #todo-sync-status:is([data-state=error],[data-state=attention]){color:#aa4656}
+#todos .todo-sync details{line-height:1.8}
+#todos .todo-sync summary{cursor:pointer;width:fit-content}
+#todos .todo-sync details>p{margin:10px 0}
+#todos .todo-sync-issue{border-top:1px solid var(--todo-line);padding:12px 0;overflow-wrap:anywhere}
+#todos .todo-sync-issue>strong{color:var(--todo-ink)}
+#todos .todo-sync-choices{display:grid;gap:8px}
+#todos .todo-sync-choices>div{padding:10px;border:1px solid var(--todo-line);border-radius:7px;background:#f6faff}
+#todos .todo-sync-choices b,#todos .todo-sync-choices span{display:block;white-space:pre-wrap}
+#todos .todo-sync-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+#todos .todo-sync-actions button{font-size:11px;color:var(--todo-blue);padding:6px 9px;border:1px solid var(--todo-line);border-radius:7px}

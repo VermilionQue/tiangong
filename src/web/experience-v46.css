@@ -1,0 +1,47 @@
+/* Theme-aware amounts, an always-available agenda rail and app-owned confirmations. */
+#today :is(.t40-spending,.t40-weather-temp){color:var(--ink)}
+#finance .t44-budget-card :is(.t44-budget-limit,.t44-budget-balance strong),
+#finance .t44-budget-card.is-low .t44-budget-balance strong{color:var(--ink)}
+#finance .t44-budget-card.is-over :is(.t44-budget-limit,.t44-budget-balance strong){color:#bd454e}
+#finance .t44-budget-card.is-over .fh-healthbar{background:#fbecef}
+#todos :is(.todo-someday-heading,.todo-main-heading){display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px;min-height:32px}
+#todos .todo-heading-label{display:flex;align-items:baseline;gap:8px;min-width:0;flex-wrap:wrap}
+#todos :is(#todo-list-title,#todo-someday-title){font-family:inherit;font-size:20px;line-height:1.4;font-weight:700;margin:0}
+#todos :is(#todo-count,#todo-someday-count){font-family:inherit;font-size:12px;line-height:1.4;color:var(--muted);white-space:nowrap;margin:0;border:0;background:transparent;padding:0}
+#todos .todo-heading-add{flex:none;background:transparent;color:var(--blue,var(--ink));border:0;box-shadow:none;padding:6px 0 6px 8px;font:inherit;font-size:13px;white-space:nowrap;cursor:pointer}
+#todos .todo-tools{border:0;margin:0 0 7px;padding:0;flex:none}
+#todos .todo-tools-body{display:block;max-height:none;overflow:visible;padding:0}
+#todos .todo-filters{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 7px}
+#todos .todo-filters button{font-size:11px;line-height:1.4;padding:4px 8px;min-height:28px}
+#todos .todo-search{margin:0;min-height:34px}
+#todos .todo-search input{height:34px}
+#todos .todo-sync-drawer{margin:6px 0 0;font-size:11px;max-height:150px;overflow:auto}
+#todos .todo-someday-hint{margin:0 0 8px}
+#todos :is(.todo-someday,.todo-main){padding:16px;min-width:0}
+#todos #todo-someday-list{overflow:auto;min-height:0}
+#todos .todo-someday-row{flex-shrink:0}
+@media(min-width:1101px){
+ html[data-theme] #todos .todo-right{grid-template-rows:minmax(0,3fr) minmax(0,7fr)}
+ #todos .todo-someday{height:100%;box-sizing:border-box}
+ #todos .todo-main{height:100%;box-sizing:border-box}
+}
+.app-confirm{width:min(440px,calc(100vw - 32px));max-height:calc(100dvh - 32px);box-sizing:border-box;padding:28px;border:1px solid var(--line,#dbe3ed);border-radius:20px;background:var(--paper,#fff);color:var(--ink);box-shadow:0 20px 70px #0003}
+.app-confirm::backdrop{background:#15263880}
+.app-confirm h2{font-family:inherit;font-weight:700;font-size:22px;line-height:1.4;margin:0 0 12px}
+.app-confirm p{font-size:15px;line-height:1.8;white-space:pre-line;margin:0 0 24px}
+.app-confirm-actions{display:flex;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.app-confirm-actions button{min-height:44px;padding:9px 18px;font:inherit;font-size:14px;border-radius:10px;cursor:pointer}
+.app-confirm-actions [data-answer=cancel]{background:var(--paper,#fff);color:var(--ink);border:1px solid var(--line,#dbe3ed)}
+.app-confirm-actions .is-danger{background:#b33c48;color:#fff;border-color:#b33c48;box-shadow:none}
+.todo-entry-dialog{width:min(530px,calc(100vw - 28px));box-sizing:border-box;max-height:calc(100dvh - 28px);overflow:auto;padding:24px;border:1px solid var(--line,#dbe3ed);border-radius:18px;background:var(--paper,#fff);color:var(--ink)}
+.todo-entry-dialog::backdrop{background:#15263880}
+.todo-entry-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.todo-entry-heading h2{font-size:21px;margin:0}
+.todo-entry-heading button{background:transparent;border:0;color:var(--muted);font-size:28px;padding:0 8px;cursor:pointer}
+.todo-entry-error{color:#bd454e;font-size:14px}
+#todos .todo-entry-dialog :is(#todo-someday-form,#todo-quick){margin:0;border:0;box-shadow:none;padding:0}
+#todos .todo-entry-dialog #todo-someday-form{display:flex;gap:10px;align-items:center}
+#todos .todo-entry-dialog #todo-someday-input{width:0;min-width:0;flex:1}
+.people-trash-actions{display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 16px}
+.people-purge{color:#b33c48;background:transparent;border:1px solid #e2bbc1;border-radius:8px;padding:8px 12px;cursor:pointer}
+@media(prefers-reduced-motion:reduce){.app-confirm{scroll-behavior:auto}}
